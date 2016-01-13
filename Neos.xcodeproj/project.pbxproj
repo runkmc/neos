@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09FDC72A791F43B7009B0E65 /* Pods_NeosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28DA6694AC0106328B359E9 /* Pods_NeosUITests.framework */; };
 		0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */; };
 		0AC729001C46F4B000CCBD3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FF1C46F4B000CCBD3C /* ViewController.swift */; };
 		0AC729031C46F4B000CCBD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729011C46F4B000CCBD3C /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		0AC729081C46F4B100CCBD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729061C46F4B100CCBD3C /* LaunchScreen.storyboard */; };
 		0AC729131C46F4B300CCBD3C /* NeosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC729121C46F4B300CCBD3C /* NeosTests.swift */; };
 		0AC7291E1C46F4B600CCBD3C /* NeosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7291D1C46F4B600CCBD3C /* NeosUITests.swift */; };
+		8E11A3D5BC82DB1999EA3644 /* Pods_NeosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD88B9CE10DC48E8F0E3444 /* Pods_NeosTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02520FCC4545ECA7DA0086D1 /* Pods-NeosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0AC728FA1C46F4AE00CCBD3C /* Neos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC728FF1C46F4B000CCBD3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		0AC729191C46F4B500CCBD3C /* NeosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC7291D1C46F4B600CCBD3C /* NeosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeosUITests.swift; sourceTree = "<group>"; };
 		0AC7291F1C46F4B600CCBD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18DE34CD2F7DF25BA56EBC67 /* Pods-NeosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4DD88B9CE10DC48E8F0E3444 /* Pods_NeosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79F42A5DC0BC3EE5253D0271 /* Pods-NeosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests.release.xcconfig"; sourceTree = "<group>"; };
+		C28DA6694AC0106328B359E9 /* Pods_NeosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE33E2D1CC2CB261AAD58CAE /* Pods-NeosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E11A3D5BC82DB1999EA3644 /* Pods_NeosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09FDC72A791F43B7009B0E65 /* Pods_NeosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +91,8 @@
 				0AC729111C46F4B300CCBD3C /* NeosTests */,
 				0AC7291C1C46F4B500CCBD3C /* NeosUITests */,
 				0AC728FB1C46F4AE00CCBD3C /* Products */,
+				5E997280D4B8078FF8F40589 /* Pods */,
+				3CC3BA9654495F67EFA6E89C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +137,26 @@
 			path = NeosUITests;
 			sourceTree = "<group>";
 		};
+		3CC3BA9654495F67EFA6E89C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DD88B9CE10DC48E8F0E3444 /* Pods_NeosTests.framework */,
+				C28DA6694AC0106328B359E9 /* Pods_NeosUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5E997280D4B8078FF8F40589 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE33E2D1CC2CB261AAD58CAE /* Pods-NeosTests.debug.xcconfig */,
+				79F42A5DC0BC3EE5253D0271 /* Pods-NeosTests.release.xcconfig */,
+				02520FCC4545ECA7DA0086D1 /* Pods-NeosUITests.debug.xcconfig */,
+				18DE34CD2F7DF25BA56EBC67 /* Pods-NeosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -149,9 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC729251C46F4B600CCBD3C /* Build configuration list for PBXNativeTarget "NeosTests" */;
 			buildPhases = (
+				5E4F858931CE1FB436ADAB0A /* Check Pods Manifest.lock */,
 				0AC7290A1C46F4B300CCBD3C /* Sources */,
 				0AC7290B1C46F4B300CCBD3C /* Frameworks */,
 				0AC7290C1C46F4B300CCBD3C /* Resources */,
+				5CB2B7D9B51A225664A6B3EE /* Embed Pods Frameworks */,
+				F8C00A5C0F56ED1004DBCC23 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC729281C46F4B600CCBD3C /* Build configuration list for PBXNativeTarget "NeosUITests" */;
 			buildPhases = (
+				5433D12C29D7607AF92E385B /* Check Pods Manifest.lock */,
 				0AC729151C46F4B400CCBD3C /* Sources */,
 				0AC729161C46F4B400CCBD3C /* Frameworks */,
 				0AC729171C46F4B400CCBD3C /* Resources */,
+				06BC82D96FCF829EA4EC5099 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -250,6 +287,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		06BC82D96FCF829EA4EC5099 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5433D12C29D7607AF92E385B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5CB2B7D9B51A225664A6B3EE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E4F858931CE1FB436ADAB0A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F8C00A5C0F56ED1004DBCC23 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0AC728F61C46F4AE00CCBD3C /* Sources */ = {
@@ -419,6 +534,7 @@
 		};
 		0AC729261C46F4B600CCBD3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE33E2D1CC2CB261AAD58CAE /* Pods-NeosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = NeosTests/Info.plist;
@@ -431,6 +547,7 @@
 		};
 		0AC729271C46F4B600CCBD3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79F42A5DC0BC3EE5253D0271 /* Pods-NeosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = NeosTests/Info.plist;
@@ -443,6 +560,7 @@
 		};
 		0AC729291C46F4B600CCBD3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02520FCC4545ECA7DA0086D1 /* Pods-NeosUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = NeosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -455,6 +573,7 @@
 		};
 		0AC7292A1C46F4B600CCBD3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18DE34CD2F7DF25BA56EBC67 /* Pods-NeosUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = NeosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -484,6 +603,7 @@
 				0AC729241C46F4B600CCBD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AC729251C46F4B600CCBD3C /* Build configuration list for PBXNativeTarget "NeosTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +612,7 @@
 				0AC729271C46F4B600CCBD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0AC729281C46F4B600CCBD3C /* Build configuration list for PBXNativeTarget "NeosUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +621,7 @@
 				0AC7292A1C46F4B600CCBD3C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
