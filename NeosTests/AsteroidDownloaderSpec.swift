@@ -29,7 +29,7 @@ class AsteroidDownloaderSpec: QuickSpec {
             let downloader = AsteroidDownloader(startDate: startDate, endDate: endDate)
             
             it("generates the correct request") {
-                expect(downloader.requestString) == "https://api.nasa.gov/neo/rest/v1/feed?start_date=1990-06-18&end_date=1990-09-24&api_key=DEMO_KEY"
+                expect(downloader.requestString) == "https://api.nasa.gov/neo/rest/v1/feed?start_date=1990-06-18&end_date=1990-09-24&api_key=\(ApiKey)"
             }
         }
     }

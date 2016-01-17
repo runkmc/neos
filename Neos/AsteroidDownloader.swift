@@ -18,7 +18,7 @@ class AsteroidDownloader {
         formatter.dateFormat = "yyyy-MM-dd"
         let startString = formatter.stringFromDate(startDate)
         let endString = formatter.stringFromDate(endDate)
-        return "https://api.nasa.gov/neo/rest/v1/feed?start_date=\(startString)&end_date=\(endString)&api_key=DEMO_KEY"
+        return "https://api.nasa.gov/neo/rest/v1/feed?start_date=\(startString)&end_date=\(endString)&api_key=\(ApiKey)"
     }
     
     init(startDate:NSDate, endDate:NSDate) {

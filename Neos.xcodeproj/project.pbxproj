@@ -10,6 +10,7 @@
 		09FDC72A791F43B7009B0E65 /* Pods_NeosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C28DA6694AC0106328B359E9 /* Pods_NeosUITests.framework */; };
 		0A9046161C4C373A003FC2BC /* AsteroidDownloaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046151C4C373A003FC2BC /* AsteroidDownloaderSpec.swift */; };
 		0A9046181C4C3A0C003FC2BC /* AsteroidDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046171C4C3A0C003FC2BC /* AsteroidDownloader.swift */; };
+		0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046191C4C432C003FC2BC /* NasaApiKey.swift */; };
 		0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */; };
 		0AC729001C46F4B000CCBD3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FF1C46F4B000CCBD3C /* ViewController.swift */; };
 		0AC729031C46F4B000CCBD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729011C46F4B000CCBD3C /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 		02520FCC4545ECA7DA0086D1 /* Pods-NeosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		0A9046151C4C373A003FC2BC /* AsteroidDownloaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidDownloaderSpec.swift; sourceTree = "<group>"; };
 		0A9046171C4C3A0C003FC2BC /* AsteroidDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidDownloader.swift; sourceTree = "<group>"; };
+		0A9046191C4C432C003FC2BC /* NasaApiKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NasaApiKey.swift; sourceTree = "<group>"; };
 		0AC728FA1C46F4AE00CCBD3C /* Neos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC728FF1C46F4B000CCBD3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			children = (
 				0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */,
 				0AC729091C46F4B200CCBD3C /* Info.plist */,
+				0A9046191C4C432C003FC2BC /* NasaApiKey.swift */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -495,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9046181C4C3A0C003FC2BC /* AsteroidDownloader.swift in Sources */,
+				0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */,
 				0AC729001C46F4B000CCBD3C /* ViewController.swift in Sources */,
 				0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */,
 			);
