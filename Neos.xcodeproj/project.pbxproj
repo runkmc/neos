@@ -13,7 +13,6 @@
 		0AC729031C46F4B000CCBD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729011C46F4B000CCBD3C /* Main.storyboard */; };
 		0AC729051C46F4B100CCBD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729041C46F4B100CCBD3C /* Assets.xcassets */; };
 		0AC729081C46F4B100CCBD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729061C46F4B100CCBD3C /* LaunchScreen.storyboard */; };
-		0AC729131C46F4B300CCBD3C /* NeosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC729121C46F4B300CCBD3C /* NeosTests.swift */; };
 		0AC7291E1C46F4B600CCBD3C /* NeosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7291D1C46F4B600CCBD3C /* NeosUITests.swift */; };
 		7578C0F0FB23DD8EB0CBB153 /* Pods_Neos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA1F9AA95178E4067FF0495 /* Pods_Neos.framework */; };
 		8E11A3D5BC82DB1999EA3644 /* Pods_NeosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD88B9CE10DC48E8F0E3444 /* Pods_NeosTests.framework */; };
@@ -46,7 +45,6 @@
 		0AC729071C46F4B100CCBD3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AC729091C46F4B200CCBD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AC7290E1C46F4B300CCBD3C /* NeosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0AC729121C46F4B300CCBD3C /* NeosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeosTests.swift; sourceTree = "<group>"; };
 		0AC729141C46F4B400CCBD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AC729191C46F4B500CCBD3C /* NeosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC7291D1C46F4B600CCBD3C /* NeosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeosUITests.swift; sourceTree = "<group>"; };
@@ -89,6 +87,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A90460D1C4C360B003FC2BC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0AC728FF1C46F4B000CCBD3C /* ViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		0A90460E1C4C361E003FC2BC /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		0A90460F1C4C362D003FC2BC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		0A9046101C4C3634003FC2BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		0A9046111C4C363A003FC2BC /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0AC729041C46F4B100CCBD3C /* Assets.xcassets */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		0A9046121C4C3643003FC2BC /* System */ = {
+			isa = PBXGroup;
+			children = (
+				0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */,
+				0AC729091C46F4B200CCBD3C /* Info.plist */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		0A9046131C4C366D003FC2BC /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0AC729011C46F4B000CCBD3C /* Main.storyboard */,
+				0AC729061C46F4B100CCBD3C /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		0A9046141C4C367C003FC2BC /* Helper Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
 		0AC728F11C46F4AE00CCBD3C = {
 			isa = PBXGroup;
 			children = (
@@ -114,12 +174,13 @@
 		0AC728FC1C46F4AF00CCBD3C /* Neos */ = {
 			isa = PBXGroup;
 			children = (
-				0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */,
-				0AC728FF1C46F4B000CCBD3C /* ViewController.swift */,
-				0AC729011C46F4B000CCBD3C /* Main.storyboard */,
-				0AC729041C46F4B100CCBD3C /* Assets.xcassets */,
-				0AC729061C46F4B100CCBD3C /* LaunchScreen.storyboard */,
-				0AC729091C46F4B200CCBD3C /* Info.plist */,
+				0A9046131C4C366D003FC2BC /* Storyboards */,
+				0A9046121C4C3643003FC2BC /* System */,
+				0A9046111C4C363A003FC2BC /* Assets */,
+				0A9046101C4C3634003FC2BC /* Models */,
+				0A90460F1C4C362D003FC2BC /* ViewModels */,
+				0A90460E1C4C361E003FC2BC /* Helper Classes */,
+				0A90460D1C4C360B003FC2BC /* Controllers */,
 			);
 			path = Neos;
 			sourceTree = "<group>";
@@ -127,7 +188,7 @@
 		0AC729111C46F4B300CCBD3C /* NeosTests */ = {
 			isa = PBXGroup;
 			children = (
-				0AC729121C46F4B300CCBD3C /* NeosTests.swift */,
+				0A9046141C4C367C003FC2BC /* Helper Classes */,
 				0AC729141C46F4B400CCBD3C /* Info.plist */,
 			);
 			path = NeosTests;
@@ -436,7 +497,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AC729131C46F4B300CCBD3C /* NeosTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
