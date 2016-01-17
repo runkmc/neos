@@ -4,6 +4,9 @@ use_frameworks!
 
 target 'Neos' do
   pod 'Alamofire', '~> 3.1.4'
+  pod 'Argo', '~>2.2.0'
+  pod 'Curry', '~> 1.4.0'
+  pod 'Runes', '~> 3.1.0'
 end
 
 def testing_pods
