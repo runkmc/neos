@@ -11,6 +11,8 @@
 		0A9046161C4C373A003FC2BC /* AsteroidDownloaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046151C4C373A003FC2BC /* AsteroidDownloaderSpec.swift */; };
 		0A9046181C4C3A0C003FC2BC /* AsteroidDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046171C4C3A0C003FC2BC /* AsteroidDownloader.swift */; };
 		0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046191C4C432C003FC2BC /* NasaApiKey.swift */; };
+		0A90461C1C4C4CFB003FC2BC /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90461B1C4C4CFB003FC2BC /* Asteroid.swift */; };
+		0A90461F1C4C4D13003FC2BC /* AsteroidSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90461E1C4C4D13003FC2BC /* AsteroidSpec.swift */; };
 		0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */; };
 		0AC729001C46F4B000CCBD3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FF1C46F4B000CCBD3C /* ViewController.swift */; };
 		0AC729031C46F4B000CCBD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729011C46F4B000CCBD3C /* Main.storyboard */; };
@@ -43,6 +45,8 @@
 		0A9046151C4C373A003FC2BC /* AsteroidDownloaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidDownloaderSpec.swift; sourceTree = "<group>"; };
 		0A9046171C4C3A0C003FC2BC /* AsteroidDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidDownloader.swift; sourceTree = "<group>"; };
 		0A9046191C4C432C003FC2BC /* NasaApiKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NasaApiKey.swift; sourceTree = "<group>"; };
+		0A90461B1C4C4CFB003FC2BC /* Asteroid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
+		0A90461E1C4C4D13003FC2BC /* AsteroidSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidSpec.swift; sourceTree = "<group>"; };
 		0AC728FA1C46F4AE00CCBD3C /* Neos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC728FF1C46F4B000CCBD3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		0A9046101C4C3634003FC2BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				0A90461B1C4C4CFB003FC2BC /* Asteroid.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -156,6 +161,14 @@
 				0A9046151C4C373A003FC2BC /* AsteroidDownloaderSpec.swift */,
 			);
 			name = "Helper Classes";
+			sourceTree = "<group>";
+		};
+		0A90461D1C4C4D07003FC2BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A90461E1C4C4D13003FC2BC /* AsteroidSpec.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		0AC728F11C46F4AE00CCBD3C = {
@@ -197,6 +210,7 @@
 		0AC729111C46F4B300CCBD3C /* NeosTests */ = {
 			isa = PBXGroup;
 			children = (
+				0A90461D1C4C4D07003FC2BC /* Models */,
 				0A9046141C4C367C003FC2BC /* Helper Classes */,
 				0AC729141C46F4B400CCBD3C /* Info.plist */,
 			);
@@ -501,6 +515,7 @@
 				0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */,
 				0AC729001C46F4B000CCBD3C /* ViewController.swift in Sources */,
 				0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */,
+				0A90461C1C4C4CFB003FC2BC /* Asteroid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9046161C4C373A003FC2BC /* AsteroidDownloaderSpec.swift in Sources */,
+				0A90461F1C4C4D13003FC2BC /* AsteroidSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
