@@ -14,6 +14,9 @@
 		0A90461C1C4C4CFB003FC2BC /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90461B1C4C4CFB003FC2BC /* Asteroid.swift */; };
 		0A90461F1C4C4D13003FC2BC /* AsteroidSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90461E1C4C4D13003FC2BC /* AsteroidSpec.swift */; };
 		0A9046221C4C516C003FC2BC /* testfeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A9046211C4C516C003FC2BC /* testfeed.json */; };
+		0A9046241C4C7B05003FC2BC /* CloseApproachSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046231C4C7B05003FC2BC /* CloseApproachSpec.swift */; };
+		0A9046261C4C7B18003FC2BC /* CloseApproach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046251C4C7B18003FC2BC /* CloseApproach.swift */; };
+		0A9046281C4C968C003FC2BC /* jsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046271C4C968C003FC2BC /* jsonParser.swift */; };
 		0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */; };
 		0AC729001C46F4B000CCBD3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FF1C46F4B000CCBD3C /* ViewController.swift */; };
 		0AC729031C46F4B000CCBD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729011C46F4B000CCBD3C /* Main.storyboard */; };
@@ -49,6 +52,9 @@
 		0A90461B1C4C4CFB003FC2BC /* Asteroid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		0A90461E1C4C4D13003FC2BC /* AsteroidSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidSpec.swift; sourceTree = "<group>"; };
 		0A9046211C4C516C003FC2BC /* testfeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testfeed.json; sourceTree = "<group>"; };
+		0A9046231C4C7B05003FC2BC /* CloseApproachSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseApproachSpec.swift; sourceTree = "<group>"; };
+		0A9046251C4C7B18003FC2BC /* CloseApproach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseApproach.swift; sourceTree = "<group>"; };
+		0A9046271C4C968C003FC2BC /* jsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonParser.swift; sourceTree = "<group>"; };
 		0AC728FA1C46F4AE00CCBD3C /* Neos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AC728FF1C46F4B000CCBD3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				0A9046171C4C3A0C003FC2BC /* AsteroidDownloader.swift */,
+				0A9046271C4C968C003FC2BC /* jsonParser.swift */,
 			);
 			name = "Helper Classes";
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				0A90461B1C4C4CFB003FC2BC /* Asteroid.swift */,
+				0A9046251C4C7B18003FC2BC /* CloseApproach.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				0A90461E1C4C4D13003FC2BC /* AsteroidSpec.swift */,
+				0A9046231C4C7B05003FC2BC /* CloseApproachSpec.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -525,6 +534,8 @@
 			files = (
 				0A9046181C4C3A0C003FC2BC /* AsteroidDownloader.swift in Sources */,
 				0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */,
+				0A9046281C4C968C003FC2BC /* jsonParser.swift in Sources */,
+				0A9046261C4C7B18003FC2BC /* CloseApproach.swift in Sources */,
 				0AC729001C46F4B000CCBD3C /* ViewController.swift in Sources */,
 				0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */,
 				0A90461C1C4C4CFB003FC2BC /* Asteroid.swift in Sources */,
@@ -535,6 +546,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9046241C4C7B05003FC2BC /* CloseApproachSpec.swift in Sources */,
 				0A9046161C4C373A003FC2BC /* AsteroidDownloaderSpec.swift in Sources */,
 				0A90461F1C4C4D13003FC2BC /* AsteroidSpec.swift in Sources */,
 			);
