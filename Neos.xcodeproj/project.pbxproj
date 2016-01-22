@@ -23,6 +23,8 @@
 		0AC729051C46F4B100CCBD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729041C46F4B100CCBD3C /* Assets.xcassets */; };
 		0AC729081C46F4B100CCBD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729061C46F4B100CCBD3C /* LaunchScreen.storyboard */; };
 		0AC7291E1C46F4B600CCBD3C /* NeosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC7291D1C46F4B600CCBD3C /* NeosUITests.swift */; };
+		0AEFB0FE1C52E08F00A551D7 /* AsteroidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB0FD1C52E08F00A551D7 /* AsteroidViewModel.swift */; };
+		0AEFB1011C52E0B700A551D7 /* AsteroidViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEFB1001C52E0B700A551D7 /* AsteroidViewModelSpec.swift */; };
 		7578C0F0FB23DD8EB0CBB153 /* Pods_Neos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA1F9AA95178E4067FF0495 /* Pods_Neos.framework */; };
 		8E11A3D5BC82DB1999EA3644 /* Pods_NeosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD88B9CE10DC48E8F0E3444 /* Pods_NeosTests.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		0AC729191C46F4B500CCBD3C /* NeosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC7291D1C46F4B600CCBD3C /* NeosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeosUITests.swift; sourceTree = "<group>"; };
 		0AC7291F1C46F4B600CCBD3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AEFB0FD1C52E08F00A551D7 /* AsteroidViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidViewModel.swift; sourceTree = "<group>"; };
+		0AEFB1001C52E0B700A551D7 /* AsteroidViewModelSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidViewModelSpec.swift; sourceTree = "<group>"; };
 		18DE34CD2F7DF25BA56EBC67 /* Pods-NeosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4DD88B9CE10DC48E8F0E3444 /* Pods_NeosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F42A5DC0BC3EE5253D0271 /* Pods-NeosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		0A90460F1C4C362D003FC2BC /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0AEFB0FD1C52E08F00A551D7 /* AsteroidViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 		0AC729111C46F4B300CCBD3C /* NeosTests */ = {
 			isa = PBXGroup;
 			children = (
+				0AEFB0FF1C52E0A600A551D7 /* ViewModels */,
 				0A9046201C4C50E2003FC2BC /* System */,
 				0A90461D1C4C4D07003FC2BC /* Models */,
 				0A9046141C4C367C003FC2BC /* Helper Classes */,
@@ -244,6 +250,14 @@
 				0AC7291F1C46F4B600CCBD3C /* Info.plist */,
 			);
 			path = NeosUITests;
+			sourceTree = "<group>";
+		};
+		0AEFB0FF1C52E0A600A551D7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0AEFB1001C52E0B700A551D7 /* AsteroidViewModelSpec.swift */,
+			);
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
 		3CC3BA9654495F67EFA6E89C /* Frameworks */ = {
@@ -533,6 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A9046181C4C3A0C003FC2BC /* AsteroidDownloader.swift in Sources */,
+				0AEFB0FE1C52E08F00A551D7 /* AsteroidViewModel.swift in Sources */,
 				0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */,
 				0A9046281C4C968C003FC2BC /* jsonParser.swift in Sources */,
 				0A9046261C4C7B18003FC2BC /* CloseApproach.swift in Sources */,
@@ -546,6 +561,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AEFB1011C52E0B700A551D7 /* AsteroidViewModelSpec.swift in Sources */,
 				0A9046241C4C7B05003FC2BC /* CloseApproachSpec.swift in Sources */,
 				0A9046161C4C373A003FC2BC /* AsteroidDownloaderSpec.swift in Sources */,
 				0A90461F1C4C4D13003FC2BC /* AsteroidSpec.swift in Sources */,
