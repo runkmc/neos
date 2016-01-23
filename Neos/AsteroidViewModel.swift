@@ -15,6 +15,7 @@ struct AsteroidViewModel {
     let minMeters: String
     let maxFeet: String
     let minFeet: String
+    let hazard: String
     
     init?(asteroid:Asteroid?) {
         guard let asteroid = asteroid else {
@@ -25,5 +26,6 @@ struct AsteroidViewModel {
         self.minMeters = NSString(format: "%.0f meters", asteroid.estimatedDiameterMinMeters) as String
         self.maxFeet = NSString(format: "%.0f feet", asteroid.estimatedDiameterMaxFeet) as String
         self.minFeet = NSString(format: "%.0f feet", asteroid.estimatedDiameterMinFeet) as String
+        self.hazard = asteroid.hazardous ? "TRUE" : "FALSE"
     }
 }
