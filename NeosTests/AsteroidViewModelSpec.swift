@@ -22,8 +22,8 @@ class AsteroidViewModelSpec: QuickSpec {
             let viewModel = AsteroidViewModel(asteroid:asteroid)
             it("formats all properties correctly") {
                 expect(viewModel?.name) == "(2011 EK)"
-                expect(viewModel?.maxMeters) == "197"
-                
+                expect(viewModel?.maxMeters) == "197 meters"
+                expect(viewModel?.minMeters) == "88 meters"
             }
         }
     }

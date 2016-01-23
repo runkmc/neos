@@ -12,12 +12,14 @@ struct AsteroidViewModel {
     
     let name: String
     let maxMeters: String
+    let minMeters: String
     
     init?(asteroid:Asteroid?) {
         guard let asteroid = asteroid else {
             return nil
         }
         self.name = asteroid.name
-        self.maxMeters = NSString(format: "%.0f", asteroid.estimatedDiameterMaxMeters) as String
+        self.maxMeters = NSString(format: "%.0f meters", asteroid.estimatedDiameterMaxMeters) as String
+        self.minMeters = NSString(format: "%.0f meters", asteroid.estimatedDiameterMinMeters) as String
     }
 }
