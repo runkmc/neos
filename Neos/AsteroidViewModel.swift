@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct AsteroidViewModel {
+    
+    let name: String
+    
+    init?(asteroid:Asteroid?) {
+        guard let asteroid = asteroid else {
+            return nil
+        }
+        self.name = asteroid.name
+    }
+}

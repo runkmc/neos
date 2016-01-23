@@ -7,3 +7,23 @@
 //
 
 import Foundation
+import Quick
+import Nimble
+@testable import Neos
+
+class AsteroidViewModelSpec: QuickSpec {
+    override func spec() {
+        describe("The AsteroidViewModel") {
+            let bundle = NSBundle(forClass: self.dynamicType)
+            let path = bundle.pathForResource("testfeed", ofType: "json")
+            let data = NSData(contentsOfFile: path!)
+            let asteroids = jsonParser(data!)
+            let asteroid = asteroids[0]
+            let viewModel = AsteroidViewModel(asteroid:asteroid)
+            it("formats all properties correctly") {
+                expect(viewModel?.name) == "(2011 EK)"
+                
+            }
+        }
+    }
+}
