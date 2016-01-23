@@ -11,11 +11,13 @@ import Foundation
 struct AsteroidViewModel {
     
     let name: String
+    let maxMeters: String
     
     init?(asteroid:Asteroid?) {
         guard let asteroid = asteroid else {
             return nil
         }
         self.name = asteroid.name
+        self.maxMeters = NSString(format: "%.0f", asteroid.estimatedDiameterMaxMeters) as String
     }
 }
