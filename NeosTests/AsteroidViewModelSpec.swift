@@ -33,6 +33,7 @@ class AsteroidViewModelSpec: QuickSpec {
                 expect(viewModel?.missDistanceKilometers) == "52,985,684"
                 expect(viewModel?.missDistanceMiles) == "32,923,778"
                 expect(viewModel?.missDistanceLunar) == "137.78"
+                expect(viewModel?.missDistanceAstronomical) == "0.354"
             }
         }
     }
