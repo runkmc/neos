@@ -30,6 +30,7 @@ class AsteroidViewModelSpec: QuickSpec {
                 expect(viewModel?.approachDate) == "2016-01-17"
                 expect(viewModel?.kph) == "53,497.8kph"
                 expect(viewModel?.mph) == "33,241.4mph"
+                expect(viewModel?.missDistanceKilometers) == "52,985,684"
             }
         }
     }
