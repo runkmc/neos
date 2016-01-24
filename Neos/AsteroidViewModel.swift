@@ -17,18 +17,26 @@ struct AsteroidViewModel {
     let minFeet: String
     let hazard: String
     let approachDate: String
+    let kph: String
+    static let formatter = NSNumberFormatter()
     
     init?(asteroid:Asteroid?) {
         guard let asteroid = asteroid else {
             return nil
         }
+        let f = AsteroidViewModel.formatter
+        f.numberStyle = .DecimalStyle
+        f.maximumFractionDigits = 0
         self.name = asteroid.name
-        self.maxMeters = NSString(format: "%.0f meters", asteroid.estimatedDiameterMaxMeters) as String
-        self.minMeters = NSString(format: "%.0f meters", asteroid.estimatedDiameterMinMeters) as String
-        self.maxFeet = NSString(format: "%.0f feet", asteroid.estimatedDiameterMaxFeet) as String
-        self.minFeet = NSString(format: "%.0f feet", asteroid.estimatedDiameterMinFeet) as String
+        self.maxMeters = (f.stringFromNumber(asteroid.estimatedDiameterMaxMeters) ?? "UNKNOWN") + " meters"
+        self.minMeters = (f.stringFromNumber(asteroid.estimatedDiameterMinMeters) ?? "UNKNOWN") + " meters"
+        self.maxFeet = (f.stringFromNumber(asteroid.estimatedDiameterMaxFeet) ?? "UNKNOWN") + " feet"
+        self.minFeet = (f.stringFromNumber(asteroid.estimatedDiameterMinFeet) ?? "UNKNOWN") + " feet"
         self.hazard = asteroid.hazardous ? "TRUE" : "FALSE"
         let approach = asteroid.approach[0]
+        f.maximumFractionDigits = 1
         self.approachDate = approach.closeApproachDate
+        let k = f.stringFromNumber((approach.kph as NSString).doubleValue)
+        self.kph = (k ?? "UNKNOWN")
     }
 }

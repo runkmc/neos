@@ -28,6 +28,7 @@ class AsteroidViewModelSpec: QuickSpec {
                 expect(viewModel?.minFeet) == "289 feet"
                 expect(viewModel?.hazard) == "FALSE"
                 expect(viewModel?.approachDate) == "2016-01-17"
+                expect(viewModel?.kph) == "53,497.8"
             }
         }
     }
