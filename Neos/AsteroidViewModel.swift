@@ -21,6 +21,7 @@ struct AsteroidViewModel {
     let mph: String
     let missDistanceKilometers: String
     let missDistanceMiles: String
+    let missDistanceLunar: String
     static let formatter = NSNumberFormatter()
     
     init?(asteroid:Asteroid?) {
@@ -47,5 +48,8 @@ struct AsteroidViewModel {
         self.missDistanceKilometers = missK ?? "UNKNOWN"
         let missM = f.stringFromNumber((approach.missDistanceMiles as NSString).integerValue)
         self.missDistanceMiles = missM ?? "UNKNOWN"
+        f.maximumFractionDigits = 2
+        let missL = f.stringFromNumber((approach.missDistanceLunar as NSString).doubleValue)
+        self.missDistanceLunar = missL ?? "UNKNOWN"
     }
 }
