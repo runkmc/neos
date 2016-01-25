@@ -24,12 +24,12 @@ class OrbitalView: UIView {
     
     // Inner orbit
     color2.setStroke()
-    innerOrbitPath.lineWidth = 2
+    innerOrbitPath.lineWidth = 1
     innerOrbitPath.stroke()
     
     // Outer orbit
     color2.setStroke()
-    outerOrbitPath.lineWidth = 2
+    outerOrbitPath.lineWidth = 1
     outerOrbitPath.stroke()
     }
 }

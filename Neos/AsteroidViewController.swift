@@ -21,7 +21,7 @@ class AsteroidViewController: UIViewController {
         let innerOrbit = CAKeyframeAnimation()
         innerOrbit.keyPath = "position"
         innerOrbit.path = orbitView.innerOrbitPath.CGPath
-        innerOrbit.duration = 21
+        innerOrbit.duration = 27
         innerOrbit.repeatCount = 1000
         innerOrbit.calculationMode = kCAAnimationCubicPaced
         innerPlanet.backgroundColor = UIColor.clearColor()
