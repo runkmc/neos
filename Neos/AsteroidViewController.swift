@@ -10,6 +10,8 @@ import UIKit
 
 class AsteroidViewController: UIViewController {
 
+    @IBOutlet weak var orbitView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
