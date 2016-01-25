@@ -10,6 +10,7 @@ import UIKit
 
 class AsteroidViewController: UIViewController {
 
+    @IBOutlet weak var pager: UIPageControl!
     @IBOutlet weak var orbitView: OrbitalView!
     let innerPlanet = LittlePlanetView()
     let outerPlanet = LittlePlanetView()
