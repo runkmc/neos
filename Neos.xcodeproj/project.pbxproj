@@ -18,7 +18,6 @@
 		0A9046261C4C7B18003FC2BC /* CloseApproach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046251C4C7B18003FC2BC /* CloseApproach.swift */; };
 		0A9046281C4C968C003FC2BC /* jsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046271C4C968C003FC2BC /* jsonParser.swift */; };
 		0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */; };
-		0AC729001C46F4B000CCBD3C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC728FF1C46F4B000CCBD3C /* ViewController.swift */; };
 		0AC729031C46F4B000CCBD3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729011C46F4B000CCBD3C /* Main.storyboard */; };
 		0AC729051C46F4B100CCBD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729041C46F4B100CCBD3C /* Assets.xcassets */; };
 		0AC729081C46F4B100CCBD3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AC729061C46F4B100CCBD3C /* LaunchScreen.storyboard */; };
@@ -62,7 +61,6 @@
 		0A9046271C4C968C003FC2BC /* jsonParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = jsonParser.swift; sourceTree = "<group>"; };
 		0AC728FA1C46F4AE00CCBD3C /* Neos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0AC728FF1C46F4B000CCBD3C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0AC729021C46F4B000CCBD3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AC729041C46F4B100CCBD3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AC729071C46F4B100CCBD3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 		0A90460D1C4C360B003FC2BC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0AC728FF1C46F4B000CCBD3C /* ViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -563,7 +560,6 @@
 				0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */,
 				0A9046281C4C968C003FC2BC /* jsonParser.swift in Sources */,
 				0A9046261C4C7B18003FC2BC /* CloseApproach.swift in Sources */,
-				0AC729001C46F4B000CCBD3C /* ViewController.swift in Sources */,
 				0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */,
 				0A90461C1C4C4CFB003FC2BC /* Asteroid.swift in Sources */,
 			);
