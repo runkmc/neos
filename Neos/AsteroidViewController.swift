@@ -18,28 +18,24 @@ class AsteroidViewController: UIViewController {
         super.viewDidLoad()
         orbitView.addSubview(innerPlanet)
         innerPlanet.frame = CGRectMake(47, 175, 18, 18)
-        let innerOrbit = CAKeyframeAnimation()
-        innerOrbit.keyPath = "position"
-        innerOrbit.path = orbitView.innerOrbitPath.CGPath
-        innerOrbit.duration = 27
-        innerOrbit.repeatCount = 1000
-        innerOrbit.calculationMode = kCAAnimationCubicPaced
-        innerPlanet.backgroundColor = UIColor.clearColor()
-        innerPlanet.layer.addAnimation(innerOrbit, forKey: "orbit")
-        
         orbitView.addSubview(outerPlanet)
         outerPlanet.frame = CGRectMake(192, 192, 18, 18)
-        let outerOrbit = CAKeyframeAnimation()
-        outerOrbit.keyPath = "position"
-        outerOrbit.path = orbitView.outerOrbitPath.CGPath
-        outerOrbit.duration = 41
-        outerOrbit.repeatCount = 1000
-        outerOrbit.calculationMode = kCAAnimationCubicPaced
-        outerPlanet.backgroundColor = UIColor.clearColor()
-        outerPlanet.layer.addAnimation(outerOrbit, forKey: "orbit2")
+        addOrbit(innerPlanet, orbit: orbitView.innerOrbitPath, speed: 27)
+        addOrbit(outerPlanet, orbit: orbitView.outerOrbitPath, speed: 41)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func addOrbit(planet:LittlePlanetView, orbit:UIBezierPath, speed:Double) {
+        let planetOrbit = CAKeyframeAnimation()
+        planetOrbit.keyPath = "position"
+        planetOrbit.path = orbit.CGPath
+        planetOrbit.duration = speed
+        planetOrbit.repeatCount = 1000
+        planetOrbit.calculationMode = kCAAnimationCubicPaced
+        planet.backgroundColor = UIColor.clearColor()
+        planet.layer.addAnimation(planetOrbit, forKey: "orbit")
     }
 }
