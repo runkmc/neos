@@ -19,7 +19,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPj-8x-vPe" customClass="OrbitalView" customModule="Neos" customModuleProvider="target">
                                 <rect key="frame" x="68" y="41" width="240" height="240"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="EoQ-Mm-Pis"/>
                                     <constraint firstAttribute="width" constant="240" id="wwb-w3-WQC"/>
@@ -34,7 +34,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="orbitView" destination="iPj-8x-vPe" id="CCV-pq-SJb"/>
+                        <outlet property="orbitView" destination="iPj-8x-vPe" id="64C-aN-orW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

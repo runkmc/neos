@@ -12,9 +12,7 @@ class OrbitalView: UIView {
     
     let sunPath = UIBezierPath(ovalInRect: CGRectMake(62, 62, 114, 114))
     let innerOrbitPath = UIBezierPath(ovalInRect: CGRectMake(28, 28, 182, 182))
-    let innerPlanetPath = UIBezierPath(ovalInRect: CGRectMake(47, 175, 18, 18))
     let outerOrbitPath = UIBezierPath(ovalInRect: CGRectMake(2, 2, 234, 234))
-    let outerPlanetPath = UIBezierPath(ovalInRect: CGRectMake(192, 193, 18, 18))
     
     override func drawRect(rect: CGRect) {
     let color = UIColor(red: 0.920, green: 0.161, blue: 0.478, alpha: 1.000)
@@ -29,17 +27,9 @@ class OrbitalView: UIView {
     innerOrbitPath.lineWidth = 2
     innerOrbitPath.stroke()
     
-    // Inner planet
-    color2.setFill()
-    innerPlanetPath.fill()
-    
     // Outer orbit
     color2.setStroke()
     outerOrbitPath.lineWidth = 2
     outerOrbitPath.stroke()
-    
-    // Outer planet
-    color2.setFill()
-    outerPlanetPath.fill()
     }
 }
