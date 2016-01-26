@@ -26,8 +26,11 @@ class AsteroidDownloader {
         self.endDate = endDate
     }
     
-    func download(completionBlock: () -> ()) {
-        Alamofire.request(.GET, requestString).responseJSON { response in
+    func download(completionBlock: (data:NSData) -> ()) {
+        Alamofire.request(.GET, requestString).responseData { response in
+            if let d = response.data {
+                completionBlock(data: d)
+            }
         }
     }
 }
