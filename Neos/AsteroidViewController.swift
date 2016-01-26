@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
     // PROPERTIES OR INSTANCE VARIABLES OR WHAEVER I'M SUPPOSED TO CALL THEM NOW
     
@@ -28,6 +28,12 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .Horizontal
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.itemSize = CGSize(width: (collectionView.frame.width), height: (collectionView.frame.height))
+        collectionView.collectionViewLayout = layout
         pager.hidesForSinglePage = true
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -104,4 +110,11 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
             pager.currentPage = cp
         }
     }
+    
+    // UICollectionViewDelegateFlowLayout stuff. What a short and very good name for this.
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return collectionView.frame.size
+    }
+    
 }
