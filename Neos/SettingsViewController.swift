@@ -17,6 +17,13 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        let attrs = [NSFontAttributeName: UIFont(name:"FiraMono-Regular", size:14)!]
+        measurementControl.setTitleTextAttributes(attrs, forState: .Normal)
+        measurementControl.tintColor = UIColor.whiteColor()
+        backButton.layer.cornerRadius = 4
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
