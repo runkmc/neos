@@ -7,6 +7,7 @@ target 'Neos' do
   pod 'Argo', '~>2.2.0'
   pod 'Curry', '~> 1.4.0'
   pod 'Runes', '~> 3.1.0'
+  pod 'Colortools', '0.1.1'
 end
 
 def testing_pods
