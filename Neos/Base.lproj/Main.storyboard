@@ -46,7 +46,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iPj-8x-vPe" customClass="OrbitalView" customModule="Neos" customModuleProvider="target">
-                                <rect key="frame" x="180" y="18" width="240" height="240"/>
+                                <rect key="frame" x="180" y="22" width="240" height="240"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="240" id="EoQ-Mm-Pis"/>
@@ -64,7 +64,7 @@
                                 <rect key="frame" x="0.0" y="545" width="600" height="55"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-LR-Des">
-                                        <rect key="frame" x="18" y="11" width="44" height="34"/>
+                                        <rect key="frame" x="14" y="11" width="44" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="Rp8-3U-UpC"/>
                                         </constraints>
@@ -78,15 +78,27 @@
                                         <color key="pageIndicatorTintColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="0.28442887931034483" colorSpace="calibratedRGB"/>
                                         <color key="currentPageIndicatorTintColor" red="0.89411764705882357" green="0.0" blue="0.40784313725490196" alpha="1" colorSpace="calibratedRGB"/>
                                     </pageControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2lz-Hb-nzQ">
+                                        <rect key="frame" x="542" y="11" width="44" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="1Oy-lH-hob"/>
+                                        </constraints>
+                                        <state key="normal" image="twitter"/>
+                                        <connections>
+                                            <action selector="tweetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJ7-h9-vDU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.94901960780000005" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="BsJ-Ru-hJn"/>
                                     <constraint firstItem="Fma-LR-Des" firstAttribute="centerY" secondItem="utN-63-bIW" secondAttribute="centerY" id="DfV-RO-HqF"/>
                                     <constraint firstItem="utN-63-bIW" firstAttribute="centerX" secondItem="6ZF-Pl-Cai" secondAttribute="centerX" id="ElO-GU-5bQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="2lz-Hb-nzQ" secondAttribute="trailing" constant="14" id="Rh2-l3-BuD"/>
+                                    <constraint firstItem="2lz-Hb-nzQ" firstAttribute="centerY" secondItem="utN-63-bIW" secondAttribute="centerY" id="VrA-sY-YHw"/>
                                     <constraint firstAttribute="bottom" secondItem="Fma-LR-Des" secondAttribute="bottom" constant="12" id="bbJ-rI-ZXt"/>
                                     <constraint firstItem="utN-63-bIW" firstAttribute="centerY" secondItem="6ZF-Pl-Cai" secondAttribute="centerY" id="oNa-TY-HFw"/>
-                                    <constraint firstItem="Fma-LR-Des" firstAttribute="leading" secondItem="6ZF-Pl-Cai" secondAttribute="leading" constant="18" id="pRF-dm-Pxr"/>
+                                    <constraint firstItem="Fma-LR-Des" firstAttribute="leading" secondItem="6ZF-Pl-Cai" secondAttribute="leading" constant="14" id="pRF-dm-Pxr"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -95,7 +107,7 @@
                                 </variation>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7bf-ay-2Oz">
-                                <rect key="frame" x="0.0" y="278" width="600" height="256"/>
+                                <rect key="frame" x="0.0" y="282" width="600" height="252"/>
                                 <color key="backgroundColor" red="0.91372549020000005" green="0.94901960780000005" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="252" id="jqh-t4-cMB"/>
@@ -108,7 +120,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" verticalCompressionResistancePriority="1000" reuseIdentifier="neosCell" id="rKQ-pV-aQC" customClass="NeosCollectionViewCell" customModule="Neos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="12" width="438" height="233"/>
+                                        <rect key="frame" x="0.0" y="10" width="438" height="233"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="438" height="233"/>
@@ -335,7 +347,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.9137254901960784" green="0.94901960784313721" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="iPj-8x-vPe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="750" constant="18" id="2BM-Rz-mPj"/>
+                            <constraint firstItem="iPj-8x-vPe" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" priority="750" constant="28" id="2BM-Rz-mPj"/>
                             <constraint firstItem="iPj-8x-vPe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Ks-78-rxy"/>
                             <constraint firstItem="sDQ-8G-p4K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="9hi-q0-1N9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sDQ-8G-p4K" secondAttribute="trailing" constant="-20" id="RKt-gB-CFF"/>
@@ -447,5 +459,6 @@
     </scenes>
     <resources>
         <image name="settings" width="34" height="34"/>
+        <image name="twitter" width="34" height="34"/>
     </resources>
 </document>

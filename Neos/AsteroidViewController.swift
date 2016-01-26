@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Social
 
 class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
@@ -77,6 +78,20 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         self.units = nil
         getUnits()
         collectionView.reloadData()
+    }
+    
+    // TWEEEEEEEEET
+    
+    @IBAction func tweetTapped(sender: AnyObject) {
+        guard let currentAsteroid = collectionView.indexPathsForVisibleItems().first?.row else {
+            return
+        }
+        let asteroid = asteroids[currentAsteroid]
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            tweetVC.setInitialText("Asteroid \(asteroid.name) is passing by earth today! #Neos")
+            self.presentViewController(tweetVC, animated: true, completion: nil)
+        }
     }
     
     // ANIMATIONS BECAUSE WHY NOT HAVE ONE CLASS DO ALL OF THIS
