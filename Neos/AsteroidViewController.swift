@@ -15,18 +15,26 @@ class AsteroidViewController: UIViewController {
     let innerPlanet = LittlePlanetView()
     let outerPlanet = LittlePlanetView()
     
+    override func viewWillAppear(animated: Bool) {
+        setPlanetsInMotion()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setPlanetsInMotion", name: UIApplicationDidBecomeActiveNotification, object: nil)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+    func setPlanetsInMotion() {
         orbitView.addSubview(innerPlanet)
         innerPlanet.frame = CGRectMake(47, 175, 18, 18)
         orbitView.addSubview(outerPlanet)
         outerPlanet.frame = CGRectMake(192, 192, 18, 18)
         addOrbit(innerPlanet, orbit: orbitView.innerOrbitPath, speed: 27)
         addOrbit(outerPlanet, orbit: orbitView.outerOrbitPath, speed: 41)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     func addOrbit(planet:LittlePlanetView, orbit:UIBezierPath, speed:Double) {
