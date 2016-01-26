@@ -12,6 +12,7 @@ class SettingsViewController: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var measurementControl: UISegmentedControl!
+    
     // OVERRIDES
     
     override func viewDidLoad() {
@@ -23,6 +24,14 @@ class SettingsViewController: UIViewController {
         measurementControl.setTitleTextAttributes(attrs, forState: .Normal)
         measurementControl.tintColor = UIColor.whiteColor()
         backButton.layer.cornerRadius = 4
+        
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let selectedUnits = defaults.objectForKey("units") as? String ?? "metric"
+        if selectedUnits == "metric" {
+            measurementControl.selectedSegmentIndex = 0
+        } else {
+            measurementControl.selectedSegmentIndex = 1
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +40,16 @@ class SettingsViewController: UIViewController {
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    @IBAction func changeMeasurement(sender: AnyObject) {
+        let sc = sender as! UISegmentedControl
+        let defaults = NSUserDefaults.standardUserDefaults()
+        if sc.selectedSegmentIndex == 0 {
+            defaults.setObject("metric", forKey: "units")
+        } else {
+            defaults.setObject("imperial", forKey: "units")
+        }
     }
 
 }

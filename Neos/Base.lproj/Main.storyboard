@@ -400,6 +400,9 @@
                                         <exclude reference="vl4-7o-iaP"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="changeMeasurement:" destination="oEG-fS-JNR" eventType="valueChanged" id="HfC-37-z4C"/>
+                                </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prx-5b-RJx">
                                 <rect key="frame" x="173" y="302" width="256" height="28"/>

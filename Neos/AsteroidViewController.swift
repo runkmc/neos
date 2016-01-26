@@ -18,11 +18,13 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     let innerPlanet = LittlePlanetView()
     let outerPlanet = LittlePlanetView()
     var asteroids = [AsteroidViewModel]()
+    var units: String?
     
     // OVERRIDES THIS PART IS BORING
     
     override func viewWillAppear(animated: Bool) {
         setPlanetsInMotion()
+        getUnits()
     }
     
     override func viewDidLoad() {
@@ -57,10 +59,24 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         return true
     }
     
+    // GET DEFAULT UNITS
+    
+    func getUnits() -> String {
+        if let u = self.units {
+            return u
+        }
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let selection = defaults.objectForKey("units") as? String ?? "metric"
+        self.units = selection
+        return selection
+    }
+    
     // SEGUE JUNK
     
     @IBAction func unwindToAsteroidController(sender:UIStoryboardSegue) {
-    
+        self.units = nil
+        getUnits()
+        collectionView.reloadData()
     }
     
     // ANIMATIONS BECAUSE WHY NOT HAVE ONE CLASS DO ALL OF THIS
@@ -96,13 +112,23 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         let asteroid = asteroids[indexPath.row]
         cell.nameLabel.text = asteroid.name
         cell.dateLabel.text = asteroid.approachDate
-        cell.maxDiameterLabel.text = asteroid.maxMeters
-        cell.minDiameterLabel.text = asteroid.minMeters
-        cell.speedLabel.text = asteroid.kph
         cell.hazardLabel.text = asteroid.hazard
-        cell.basicDistanceLabel.text = asteroid.missDistanceKilometers
         cell.auDistanceLabel.text = asteroid.missDistanceAstronomical
         cell.lunarDistanceLabel.text = asteroid.missDistanceLunar
+        
+        if getUnits() == "metric" {
+            cell.basicDistanceLabel.text = asteroid.missDistanceKilometers
+            cell.speedLabel.text = asteroid.kph
+            cell.maxDiameterLabel.text = asteroid.maxMeters
+            cell.minDiameterLabel.text = asteroid.minMeters
+            cell.distanceUnitsLabel.text = "KILOMETERS:"
+        } else {
+            cell.basicDistanceLabel.text = asteroid.missDistanceMiles
+            cell.speedLabel.text = asteroid.mph
+            cell.maxDiameterLabel.text = asteroid.maxFeet
+            cell.minDiameterLabel.text = asteroid.minFeet
+            cell.distanceUnitsLabel.text = "MILES:"
+        }
         
         return cell
     }
