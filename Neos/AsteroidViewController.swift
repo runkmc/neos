@@ -81,7 +81,27 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("neosCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("neosCell", forIndexPath: indexPath) as! NeosCollectionViewCell
+        let asteroid = asteroids[indexPath.row]
+        cell.nameLabel.text = asteroid.name
+        cell.dateLabel.text = asteroid.approachDate
+        cell.maxDiameterLabel.text = asteroid.maxMeters
+        cell.minDiameterLabel.text = asteroid.minMeters
+        cell.speedLabel.text = asteroid.kph
+        cell.hazardLabel.text = asteroid.hazard
+        cell.basicDistanceLabel.text = asteroid.missDistanceKilometers
+        cell.auDistanceLabel.text = asteroid.missDistanceAstronomical
+        cell.lunarDistanceLabel.text = asteroid.missDistanceLunar
+        
         return cell
+    }
+    
+    // UIScrollViewDelegate stuff, to connect the collectionView to the page control.
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let cv = scrollView as! UICollectionView
+        if let cp = cv.indexPathsForVisibleItems().first?.row {
+            pager.currentPage = cp
+        }
     }
 }
