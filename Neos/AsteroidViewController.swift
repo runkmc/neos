@@ -8,6 +8,7 @@
 
 import UIKit
 import Social
+import Alamofire
 
 class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
@@ -44,11 +45,22 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.showsHorizontalScrollIndicator = false
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setPlanetsInMotion", name: UIApplicationDidBecomeActiveNotification, object: nil)
         let downloader = AsteroidDownloader(startDate: NSDate(), endDate: NSDate())
-        downloader.download { data in
-            let asteroidModels = jsonParser(data)
-            self.asteroids = asteroidModels.flatMap { AsteroidViewModel(asteroid: $0) }
-            self.pager.numberOfPages = self.asteroids.count
-            self.collectionView.reloadData()
+        
+        downloader.download { response in
+            if let _ = response.result.error {
+                let alert = UIAlertController(title: "Error", message: "There was a problem getting today's asteroids.", preferredStyle: .Alert)
+                let ok = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                alert.addAction(ok)
+                self.presentViewController(alert, animated: true, completion: nil)
+                self.asteroids = []
+                return
+            }
+            if let data = response.data {
+                let asteroidModels = jsonParser(data)
+                self.asteroids = asteroidModels.flatMap { AsteroidViewModel(asteroid: $0) }
+                self.pager.numberOfPages = self.asteroids.count
+                self.collectionView.reloadData()
+            }
         }
     }
 
