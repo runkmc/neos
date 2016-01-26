@@ -10,10 +10,14 @@ import UIKit
 
 class AsteroidViewController: UIViewController {
 
+    // PROPERTIES OR INSTANCE VARIABLES OR WHAEVER I'M SUPPOSED TO CALL THEM NOW
+    
     @IBOutlet weak var pager: UIPageControl!
     @IBOutlet weak var orbitView: OrbitalView!
     let innerPlanet = LittlePlanetView()
     let outerPlanet = LittlePlanetView()
+    
+    // OVERRIDES THIS PART IS BORING
     
     override func viewWillAppear(animated: Bool) {
         setPlanetsInMotion()
@@ -27,6 +31,12 @@ class AsteroidViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    // ANIMATIONS BECAUSE WHY NOT HAVE ONE CLASS DO ALL OF THIS
     
     func setPlanetsInMotion() {
         orbitView.addSubview(innerPlanet)
