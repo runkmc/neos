@@ -30,6 +30,7 @@
 		0AFFF9FC1C55D9CE00087FF4 /* AsteroidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFF9FB1C55D9CE00087FF4 /* AsteroidViewController.swift */; };
 		0AFFF9FF1C55DE6100087FF4 /* OrbitalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFF9FE1C55DE6100087FF4 /* OrbitalView.swift */; };
 		0AFFFA011C55E7D200087FF4 /* LittlePlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFFA001C55E7D200087FF4 /* LittlePlanetView.swift */; };
+		0AFFFA031C57027800087FF4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFFA021C57027800087FF4 /* SettingsViewController.swift */; };
 		7578C0F0FB23DD8EB0CBB153 /* Pods_Neos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA1F9AA95178E4067FF0495 /* Pods_Neos.framework */; };
 		8E11A3D5BC82DB1999EA3644 /* Pods_NeosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DD88B9CE10DC48E8F0E3444 /* Pods_NeosTests.framework */; };
 /* End PBXBuildFile section */
@@ -81,6 +82,7 @@
 		0AFFF9FB1C55D9CE00087FF4 /* AsteroidViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidViewController.swift; sourceTree = "<group>"; };
 		0AFFF9FE1C55DE6100087FF4 /* OrbitalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrbitalView.swift; sourceTree = "<group>"; };
 		0AFFFA001C55E7D200087FF4 /* LittlePlanetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LittlePlanetView.swift; sourceTree = "<group>"; };
+		0AFFFA021C57027800087FF4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		18DE34CD2F7DF25BA56EBC67 /* Pods-NeosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4DD88B9CE10DC48E8F0E3444 /* Pods_NeosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F42A5DC0BC3EE5253D0271 /* Pods-NeosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				0AFFF9FB1C55D9CE00087FF4 /* AsteroidViewController.swift */,
+				0AFFFA021C57027800087FF4 /* SettingsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -574,6 +577,7 @@
 			files = (
 				0A9046181C4C3A0C003FC2BC /* AsteroidDownloader.swift in Sources */,
 				0AFFF9FF1C55DE6100087FF4 /* OrbitalView.swift in Sources */,
+				0AFFFA031C57027800087FF4 /* SettingsViewController.swift in Sources */,
 				0AFFF9FC1C55D9CE00087FF4 /* AsteroidViewController.swift in Sources */,
 				0AEFB0FE1C52E08F00A551D7 /* AsteroidViewModel.swift in Sources */,
 				0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */,
