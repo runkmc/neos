@@ -9,8 +9,9 @@
 import UIKit
 import Social
 import Alamofire
+import DZNEmptyDataSet
 
-class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
 
     // PROPERTIES OR INSTANCE VARIABLES OR WHAEVER I'M SUPPOSED TO CALL THEM NOW
     
@@ -38,6 +39,8 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         layout.itemSize = CGSize(width: (collectionView.frame.width), height: (collectionView.frame.height))
         collectionView.collectionViewLayout = layout
         pager.hidesForSinglePage = true
+        collectionView.emptyDataSetDelegate = self
+        collectionView.emptyDataSetSource = self
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.pagingEnabled = true
@@ -173,6 +176,14 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return collectionView.frame.size
+    }
+    
+    // BUT WHAT DO WE DO IF THERE ARE NO ASTEROIDS TODAY
+    
+    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+        let attrs = [NSFontAttributeName: UIFont(name: "FiraMono-Bold", size: 19)!,
+            NSForegroundColorAttributeName: UIColor(red:0.184, green:0.192, blue:0.267, alpha:1)]
+        return NSAttributedString(string: "NO ASTEROIDS TODAY", attributes: attrs)
     }
     
 }
