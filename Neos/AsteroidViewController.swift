@@ -8,24 +8,40 @@
 
 import UIKit
 
-class AsteroidViewController: UIViewController {
+class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     // PROPERTIES OR INSTANCE VARIABLES OR WHAEVER I'M SUPPOSED TO CALL THEM NOW
     
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pager: UIPageControl!
     @IBOutlet weak var orbitView: OrbitalView!
     let innerPlanet = LittlePlanetView()
     let outerPlanet = LittlePlanetView()
+    var asteroids = [AsteroidViewModel]()
     
     // OVERRIDES THIS PART IS BORING
     
     override func viewWillAppear(animated: Bool) {
         setPlanetsInMotion()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        pager.hidesForSinglePage = true
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.pagingEnabled = true
+        collectionView.allowsSelection = false
+        collectionView.showsHorizontalScrollIndicator = false
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setPlanetsInMotion", name: UIApplicationDidBecomeActiveNotification, object: nil)
+        let downloader = AsteroidDownloader(startDate: NSDate(), endDate: NSDate())
+        downloader.download { data in
+            let asteroidModels = jsonParser(data)
+            self.asteroids = asteroidModels.flatMap { AsteroidViewModel(asteroid: $0) }
+            self.pager.numberOfPages = self.asteroids.count
+            self.collectionView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,5 +72,16 @@ class AsteroidViewController: UIViewController {
         planetOrbit.calculationMode = kCAAnimationCubicPaced
         planet.backgroundColor = UIColor.clearColor()
         planet.layer.addAnimation(planetOrbit, forKey: "orbit")
+    }
+    
+    // UICollectionViewDataSource stuff
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return asteroids.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("neosCell", forIndexPath: indexPath)
+        return cell
     }
 }
