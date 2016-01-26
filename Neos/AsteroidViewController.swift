@@ -23,7 +23,6 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     
     override func viewWillAppear(animated: Bool) {
         setPlanetsInMotion()
-        
     }
     
     override func viewDidLoad() {
@@ -56,6 +55,12 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    // SEGUE JUNK
+    
+    @IBAction func unwindToAsteroidController(sender:UIStoryboardSegue) {
+    
     }
     
     // ANIMATIONS BECAUSE WHY NOT HAVE ONE CLASS DO ALL OF THIS
