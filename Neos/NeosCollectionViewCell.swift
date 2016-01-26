@@ -10,4 +10,5 @@ import UIKit
 
 class NeosCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var distanceUnitsLabel: UILabel!
 }
