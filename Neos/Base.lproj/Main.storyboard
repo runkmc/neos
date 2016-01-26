@@ -8,8 +8,10 @@
     <customFonts key="customFonts">
         <mutableArray key="FiraMono-Bold.otf">
             <string>FiraMono-Bold</string>
+            <string>FiraMono-Bold</string>
         </mutableArray>
         <mutableArray key="FiraMono-Regular.otf">
+            <string>FiraMono-Regular</string>
             <string>FiraMono-Regular</string>
             <string>FiraMono-Regular</string>
             <string>FiraMono-Regular</string>
@@ -217,55 +219,55 @@
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg2-gR-nM5">
                                                                     <rect key="frame" x="4" y="8" width="42" height="18"/>
                                                                     <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
-                                                                    <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.88235294818878174" green="0.16470588743686676" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EtQ-xG-ruk">
                                                                     <rect key="frame" x="4" y="26" width="42" height="17"/>
                                                                     <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
-                                                                    <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.88235294818878174" green="0.16470588743686676" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ON-vW-rq9">
                                                                     <rect key="frame" x="4" y="51" width="42" height="17"/>
                                                                     <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
-                                                                    <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.88235294818878174" green="0.16470588743686676" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kW-VL-6Av">
                                                                     <rect key="frame" x="4" y="68" width="42" height="17"/>
                                                                     <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
-                                                                    <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.88235294818878174" green="0.16470588743686676" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XhU-tH-mJf">
                                                                     <rect key="frame" x="4" y="93" width="42" height="17"/>
                                                                     <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
-                                                                    <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.88235294818878174" green="0.16470588743686676" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bwC-Pq-fV6">
                                                                     <rect key="frame" x="4" y="110" width="42" height="17"/>
                                                                     <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
-                                                                    <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.88235294818878174" green="0.16470588743686676" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pcz-tv-8Mc">
                                                                     <rect key="frame" x="4" y="160" width="42" height="17"/>
                                                                     <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
-                                                                    <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.88235294818878174" green="0.16470588743686676" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXy-bH-O3f">
                                                                     <rect key="frame" x="4" y="177" width="42" height="17"/>
                                                                     <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
-                                                                    <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.88235294818878174" green="0.16470588743686676" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIX-Lr-rcM">
                                                                     <rect key="frame" x="4" y="194" width="42" height="17"/>
                                                                     <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
-                                                                    <color key="textColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="textColor" red="0.88235294818878174" green="0.16470588743686676" blue="0.47843137383460999" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -369,8 +371,67 @@
                     <view key="view" contentMode="scaleToFill" id="gLo-Mg-deL">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.89411764709999997" green="0.0" blue="0.40784313729999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bww-6o-3rC">
+                                <rect key="frame" x="28" y="175" width="544" height="250"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="C6r-N4-C8e"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6A-54-tYT">
+                                <rect key="frame" x="257" y="174" width="87" height="22"/>
+                                <fontDescription key="fontDescription" name="FiraMono-Bold" family="Fira Mono" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="plm-zA-ciw">
+                                <rect key="frame" x="174" y="235" width="254" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="254" id="01a-FK-BjR"/>
+                                    <constraint firstAttribute="width" constant="125" id="vl4-7o-iaP"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="metric"/>
+                                    <segment title="imperial"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vl4-7o-iaP"/>
+                                    </mask>
+                                </variation>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prx-5b-RJx">
+                                <rect key="frame" x="173" y="302" width="256" height="28"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="dfH-fK-H14"/>
+                                    <constraint firstAttribute="height" constant="28" id="gff-GL-fXB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="FiraMono-Regular" family="Fira Mono" pointSize="14"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" red="0.88235294819999999" green="0.1647058874" blue="0.4784313738" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.88235294819999999" green="0.1647058874" blue="0.4784313738" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="plm-zA-ciw" firstAttribute="top" secondItem="Q6A-54-tYT" secondAttribute="bottom" constant="39" id="1Fw-Nc-mGx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Bww-6o-3rC" secondAttribute="trailing" constant="8" id="I4H-et-dBt"/>
+                            <constraint firstItem="Bww-6o-3rC" firstAttribute="leading" secondItem="gLo-Mg-deL" secondAttribute="leadingMargin" constant="8" id="Vyf-mv-rw9"/>
+                            <constraint firstItem="plm-zA-ciw" firstAttribute="centerX" secondItem="Q6A-54-tYT" secondAttribute="centerX" id="ZaX-hH-EIY"/>
+                            <constraint firstItem="Bww-6o-3rC" firstAttribute="top" secondItem="Q6A-54-tYT" secondAttribute="bottom" constant="-21" id="a3F-Ap-ckp"/>
+                            <constraint firstItem="Q6A-54-tYT" firstAttribute="centerX" secondItem="Bww-6o-3rC" secondAttribute="centerX" id="ikh-w7-Y41"/>
+                            <constraint firstItem="prx-5b-RJx" firstAttribute="centerX" secondItem="plm-zA-ciw" secondAttribute="centerX" id="jIW-EQ-LNp"/>
+                            <constraint firstItem="prx-5b-RJx" firstAttribute="top" secondItem="plm-zA-ciw" secondAttribute="bottom" constant="39" id="ols-bU-lch"/>
+                            <constraint firstItem="Bww-6o-3rC" firstAttribute="centerX" secondItem="gLo-Mg-deL" secondAttribute="centerX" id="wT0-vq-NGo"/>
+                            <constraint firstItem="Bww-6o-3rC" firstAttribute="centerY" secondItem="gLo-Mg-deL" secondAttribute="centerY" id="ycu-g8-OZX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="prx-5b-RJx" id="vx5-MF-DMR"/>
+                        <outlet property="measurementControl" destination="plm-zA-ciw" id="6B3-xY-kPd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RAp-KP-mFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

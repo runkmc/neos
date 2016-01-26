@@ -10,6 +10,8 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var measurementControl: UISegmentedControl!
     // OVERRIDES
     
     override func viewDidLoad() {
