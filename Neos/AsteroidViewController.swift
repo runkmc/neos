@@ -15,6 +15,7 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
 
     // PROPERTIES OR INSTANCE VARIABLES OR WHAEVER I'M SUPPOSED TO CALL THEM NOW
     
+    @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pager: UIPageControl!
     @IBOutlet weak var orbitView: OrbitalView!
@@ -47,6 +48,8 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.allowsSelection = false
         collectionView.showsHorizontalScrollIndicator = false
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setPlanetsInMotion", name: UIApplicationDidBecomeActiveNotification, object: nil)
+        activitySpinner.startAnimating()
+        collectionView.hidden = true
         let downloader = AsteroidDownloader(startDate: NSDate(), endDate: NSDate())
         
         downloader.download { response in
@@ -56,6 +59,8 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
                 alert.addAction(ok)
                 self.presentViewController(alert, animated: true, completion: nil)
                 self.asteroids = []
+                self.activitySpinner.stopAnimating()
+                self.collectionView.hidden = false
                 return
             }
             if let data = response.data {
@@ -63,6 +68,8 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
                 self.asteroids = asteroidModels.flatMap { AsteroidViewModel(asteroid: $0) }
                 self.pager.numberOfPages = self.asteroids.count
                 self.collectionView.reloadData()
+                self.activitySpinner.stopAnimating()
+                self.collectionView.hidden = false
             }
         }
     }
