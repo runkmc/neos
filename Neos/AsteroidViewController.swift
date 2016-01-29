@@ -174,7 +174,7 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
         let cv = scrollView as! UICollectionView
-        if let cp = cv.indexPathsForVisibleItems().first?.row {
+        if let cp = cv.indexPathForItemAtPoint(cv.convertPoint(cv.center, fromView: cv.superview))?.row {
             pager.currentPage = cp
         }
     }
