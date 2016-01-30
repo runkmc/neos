@@ -50,6 +50,8 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "setPlanetsInMotion", name: UIApplicationDidBecomeActiveNotification, object: nil)
         activitySpinner.startAnimating()
         collectionView.hidden = true
+        self.pager.hidesForSinglePage = true
+        self.pager.hidden = true
         let downloader = AsteroidDownloader(startDate: NSDate(), endDate: NSDate())
         
         downloader.download { response in
@@ -70,6 +72,7 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
                 self.collectionView.reloadData()
                 self.activitySpinner.stopAnimating()
                 self.collectionView.hidden = false
+                self.pager.hidden = false
             }
         }
     }
