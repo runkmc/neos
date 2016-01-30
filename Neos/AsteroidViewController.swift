@@ -108,7 +108,7 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     // TWEEEEEEEEET
     
     @IBAction func tweetTapped(sender: AnyObject) {
-        guard let currentAsteroid = collectionView.indexPathsForVisibleItems().first?.row else {
+        guard let currentAsteroid = collectionView.indexPathForItemAtPoint(collectionView.convertPoint(collectionView.center, fromView: collectionView.superview))?.row else {
             return
         }
         let asteroid = asteroids[currentAsteroid]
