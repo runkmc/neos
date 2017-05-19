@@ -19,14 +19,14 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         let attrs = [NSFontAttributeName: UIFont(name:"FiraMono-Regular", size:14)!]
-        measurementControl.setTitleTextAttributes(attrs, forState: .Normal)
-        measurementControl.tintColor = UIColor.whiteColor()
+        measurementControl.setTitleTextAttributes(attrs, for: UIControlState())
+        measurementControl.tintColor = UIColor.white
         backButton.layer.cornerRadius = 4
         
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let selectedUnits = defaults.objectForKey("units") as? String ?? "metric"
+        let defaults = UserDefaults.standard
+        let selectedUnits = defaults.object(forKey: "units") as? String ?? "metric"
         if selectedUnits == "metric" {
             measurementControl.selectedSegmentIndex = 0
         } else {
@@ -38,17 +38,17 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
-    @IBAction func changeMeasurement(sender: AnyObject) {
+    @IBAction func changeMeasurement(_ sender: AnyObject) {
         let sc = sender as! UISegmentedControl
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard
         if sc.selectedSegmentIndex == 0 {
-            defaults.setObject("metric", forKey: "units")
+            defaults.set("metric", forKey: "units")
         } else {
-            defaults.setObject("imperial", forKey: "units")
+            defaults.set("imperial", forKey: "units")
         }
     }
 

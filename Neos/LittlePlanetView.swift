@@ -10,9 +10,9 @@ import UIKit
 
 class LittlePlanetView: UIView {
 
-    override func drawRect(rect: CGRect) {
+    override func draw(_ rect: CGRect) {
         let blueColor = UIColor(red: 0.380, green: 0.906, blue: 0.878, alpha: 1.000)
-        let planet = UIBezierPath(ovalInRect: CGRectMake(0, 0, 18, 18))
+        let planet = UIBezierPath(ovalIn: CGRect(x: 0, y: 0, width: 18, height: 18))
         blueColor.setFill()
         planet.fill()
     }

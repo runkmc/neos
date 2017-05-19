@@ -22,7 +22,7 @@ struct CloseApproach {
 }
 
 extension CloseApproach: Decodable {
-    static func decode(json: JSON) -> Decoded<CloseApproach> {
+    static func decode(_ json: JSON) -> Decoded<CloseApproach> {
         let c = curry(CloseApproach.init)
         return c
             <^> json <| "close_approach_date"

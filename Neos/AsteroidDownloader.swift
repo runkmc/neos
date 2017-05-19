@@ -11,22 +11,22 @@ import Alamofire
 
 class AsteroidDownloader {
     
-    let startDate: NSDate
-    let endDate: NSDate
+    let startDate: Date
+    let endDate: Date
     var requestString: String {
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        let startString = formatter.stringFromDate(startDate)
-        let endString = formatter.stringFromDate(endDate)
+        let startString = formatter.string(from: startDate)
+        let endString = formatter.string(from: endDate)
         return "https://api.nasa.gov/neo/rest/v1/feed?start_date=\(startString)&end_date=\(endString)&api_key=\(ApiKey)"
     }
     
-    init(startDate:NSDate, endDate:NSDate) {
+    init(startDate:Date, endDate:Date) {
         self.startDate = startDate
         self.endDate = endDate
     }
     
-    func download(completionBlock: (response: Response<NSData, NSError>) -> ()) {
+    func download(_ completionBlock: (_ response: Response<NSData, NSError>) -> ()) {
         Alamofire.request(.GET, requestString).responseData { response in
             completionBlock(response: response)
         }

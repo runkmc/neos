@@ -26,7 +26,7 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     
     // OVERRIDES THIS PART IS BORING
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         setPlanetsInMotion()
         getUnits()
     }
@@ -34,7 +34,7 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .Horizontal
+        layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.itemSize = CGSize(width: (collectionView.frame.width), height: (collectionView.frame.height))
@@ -44,15 +44,15 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         collectionView.emptyDataSetSource = self
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.pagingEnabled = true
+        collectionView.isPagingEnabled = true
         collectionView.allowsSelection = false
         collectionView.showsHorizontalScrollIndicator = false
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "setPlanetsInMotion", name: UIApplicationDidBecomeActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AsteroidViewController.setPlanetsInMotion), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
         activitySpinner.startAnimating()
-        collectionView.hidden = true
+        collectionView.isHidden = true
         self.pager.hidesForSinglePage = true
-        self.pager.hidden = true
-        let downloader = AsteroidDownloader(startDate: NSDate(), endDate: NSDate())
+        self.pager.isHidden = true
+        let downloader = AsteroidDownloader(startDate: Date(), endDate: Date())
         
         downloader.download { response in
             if let _ = response.result.error {
@@ -81,7 +81,7 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         super.didReceiveMemoryWarning()
     }
     
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
@@ -91,15 +91,15 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         if let u = self.units {
             return u
         }
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let selection = defaults.objectForKey("units") as? String ?? "metric"
+        let defaults = UserDefaults.standard
+        let selection = defaults.object(forKey: "units") as? String ?? "metric"
         self.units = selection
         return selection
     }
     
     // SEGUE JUNK
     
-    @IBAction func unwindToAsteroidController(sender:UIStoryboardSegue) {
+    @IBAction func unwindToAsteroidController(_ sender:UIStoryboardSegue) {
         self.units = nil
         getUnits()
         collectionView.reloadData()
@@ -107,15 +107,15 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     
     // TWEEEEEEEEET
     
-    @IBAction func tweetTapped(sender: AnyObject) {
-        guard let currentAsteroid = collectionView.indexPathForItemAtPoint(collectionView.convertPoint(collectionView.center, fromView: collectionView.superview))?.row else {
+    @IBAction func tweetTapped(_ sender: AnyObject) {
+        guard let currentAsteroid = collectionView.indexPathForItem(at: collectionView.convert(collectionView.center, from: collectionView.superview))?.row else {
             return
         }
         let asteroid = asteroids[currentAsteroid]
-        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeTwitter) {
             let tweetVC = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
-            tweetVC.setInitialText("Asteroid \(asteroid.name) is passing by earth today! #Neos")
-            self.presentViewController(tweetVC, animated: true, completion: nil)
+            tweetVC?.setInitialText("Asteroid \(asteroid.name) is passing by earth today! #Neos")
+            self.present(tweetVC!, animated: true, completion: nil)
         }
     }
     
@@ -123,32 +123,32 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func setPlanetsInMotion() {
         orbitView.addSubview(innerPlanet)
-        innerPlanet.frame = CGRectMake(47, 175, 18, 18)
+        innerPlanet.frame = CGRect(x: 47, y: 175, width: 18, height: 18)
         orbitView.addSubview(outerPlanet)
-        outerPlanet.frame = CGRectMake(192, 192, 18, 18)
+        outerPlanet.frame = CGRect(x: 192, y: 192, width: 18, height: 18)
         addOrbit(innerPlanet, orbit: orbitView.innerOrbitPath, speed: 27)
         addOrbit(outerPlanet, orbit: orbitView.outerOrbitPath, speed: 41)
     }
     
-    func addOrbit(planet:LittlePlanetView, orbit:UIBezierPath, speed:Double) {
+    func addOrbit(_ planet:LittlePlanetView, orbit:UIBezierPath, speed:Double) {
         let planetOrbit = CAKeyframeAnimation()
         planetOrbit.keyPath = "position"
-        planetOrbit.path = orbit.CGPath
+        planetOrbit.path = orbit.cgPath
         planetOrbit.duration = speed
         planetOrbit.repeatCount = 1000
         planetOrbit.calculationMode = kCAAnimationCubicPaced
-        planet.backgroundColor = UIColor.clearColor()
-        planet.layer.addAnimation(planetOrbit, forKey: "orbit")
+        planet.backgroundColor = UIColor.clear
+        planet.layer.add(planetOrbit, forKey: "orbit")
     }
     
     // UICollectionViewDataSource stuff
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return asteroids.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("neosCell", forIndexPath: indexPath) as! NeosCollectionViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "neosCell", for: indexPath) as! NeosCollectionViewCell
         let asteroid = asteroids[indexPath.row]
         cell.nameLabel.text = asteroid.name
         cell.dateLabel.text = asteroid.approachDate
@@ -175,22 +175,22 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     
     // UIScrollViewDelegate stuff, to connect the collectionView to the page control.
     
-    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let cv = scrollView as! UICollectionView
-        if let cp = cv.indexPathForItemAtPoint(cv.convertPoint(cv.center, fromView: cv.superview))?.row {
+        if let cp = cv.indexPathForItem(at: cv.convert(cv.center, from: cv.superview))?.row {
             pager.currentPage = cp
         }
     }
     
     // UICollectionViewDelegateFlowLayout stuff. What a short and very good name for this.
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return collectionView.frame.size
     }
     
     // BUT WHAT DO WE DO IF THERE ARE NO ASTEROIDS TODAY
     
-    func titleForEmptyDataSet(scrollView: UIScrollView!) -> NSAttributedString! {
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
         let attrs = [NSFontAttributeName: UIFont(name: "FiraMono-Bold", size: 19)!,
             NSForegroundColorAttributeName: UIColor(red:0.184, green:0.192, blue:0.267, alpha:1)]
         return NSAttributedString(string: "NO ASTEROIDS TODAY", attributes: attrs)

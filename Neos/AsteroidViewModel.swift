@@ -23,37 +23,37 @@ struct AsteroidViewModel {
     let missDistanceMiles: String
     let missDistanceLunar: String
     let missDistanceAstronomical: String
-    static let formatter = NSNumberFormatter()
+    static let formatter = NumberFormatter()
     
     init?(asteroid:Asteroid?) {
         guard let asteroid = asteroid else {
             return nil
         }
         let f = AsteroidViewModel.formatter
-        f.numberStyle = .DecimalStyle
+        f.numberStyle = .decimal
         f.maximumFractionDigits = 0
         self.name = asteroid.name
-        self.maxMeters = (f.stringFromNumber(asteroid.estimatedDiameterMaxMeters) ?? "UNKNOWN") + " meters"
-        self.minMeters = (f.stringFromNumber(asteroid.estimatedDiameterMinMeters) ?? "UNKNOWN") + " meters"
-        self.maxFeet = (f.stringFromNumber(asteroid.estimatedDiameterMaxFeet) ?? "UNKNOWN") + " feet"
-        self.minFeet = (f.stringFromNumber(asteroid.estimatedDiameterMinFeet) ?? "UNKNOWN") + " feet"
+        self.maxMeters = (f.string(from: NSNumber(asteroid.estimatedDiameterMaxMeters)) ?? "UNKNOWN") + " meters"
+        self.minMeters = (f.string(from: NSNumber(asteroid.estimatedDiameterMinMeters)) ?? "UNKNOWN") + " meters"
+        self.maxFeet = (f.string(from: NSNumber(asteroid.estimatedDiameterMaxFeet)) ?? "UNKNOWN") + " feet"
+        self.minFeet = (f.string(from: NSNumber(asteroid.estimatedDiameterMinFeet)) ?? "UNKNOWN") + " feet"
         self.hazard = asteroid.hazardous ? "TRUE" : "FALSE"
         let approach = asteroid.approach[0]
         f.maximumFractionDigits = 1
         self.approachDate = approach.closeApproachDate
-        let k = f.stringFromNumber((approach.kph as NSString).doubleValue)
+        let k = f.string(from: NSNumber((approach.kph as NSString).doubleValue))
         self.kph = (k ?? "UNKNOWN ") + "kph"
-        let m = f.stringFromNumber((approach.mph as NSString).doubleValue)
+        let m = f.string(from: NSNumber((approach.mph as NSString).doubleValue))
         self.mph = (m ?? "UNKNOWN ") + "mph"
-        let missK = f.stringFromNumber((approach.missDistanceKilometers as NSString).integerValue)
+        let missK = f.string(from: NSNumber((approach.missDistanceKilometers as NSString).integerValue))
         self.missDistanceKilometers = missK ?? "UNKNOWN"
-        let missM = f.stringFromNumber((approach.missDistanceMiles as NSString).integerValue)
+        let missM = f.string(from: NSNumber((approach.missDistanceMiles as NSString).integerValue))
         self.missDistanceMiles = missM ?? "UNKNOWN"
         f.maximumFractionDigits = 2
-        let missL = f.stringFromNumber((approach.missDistanceLunar as NSString).doubleValue)
+        let missL = f.string(from: NSNumber((approach.missDistanceLunar as NSString).doubleValue))
         self.missDistanceLunar = missL ?? "UNKNOWN"
         f.maximumFractionDigits = 3
-        let missA = f.stringFromNumber((approach.missDistanceAstronomical as NSString).doubleValue)
+        let missA = f.string(from: NSNumber((approach.missDistanceAstronomical as NSString).doubleValue))
         self.missDistanceAstronomical = missA ?? "UNKNOWN"
     }
 }

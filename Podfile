@@ -3,23 +3,16 @@ platform :ios, '9.0'
 use_frameworks!
 
 target 'Neos' do
-  pod 'Alamofire', '~> 3.1.4'
-  pod 'Argo', '~>2.2.0'
-  pod 'Curry', '~> 1.4.0'
-  pod 'Runes', '~> 3.1.0'
-  pod 'DZNEmptyDataSet', '1.7.3'
-end
-
-def testing_pods
-  pod 'Quick', '~> 0.8'
-  pod 'Nimble', '~> 3.0.0'
+  pod 'Alamofire', '~> 4.4'
+  pod 'Argo', '~>4'
+  pod 'Curry', '~> 3'
+  pod 'Runes', '~> 4'
+  pod 'DZNEmptyDataSet', '1.8.1'
 end
 
 target 'NeosTests' do
-  testing_pods
 end
 
 target 'NeosUITests' do
-  testing_pods
 end
 

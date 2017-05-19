@@ -23,7 +23,7 @@ struct Asteroid {
 }
 
 extension Asteroid: Decodable {
-    static func decode(json: JSON) -> Decoded<Asteroid> {
+    static func decode(_ json: JSON) -> Decoded<Asteroid> {
         let a = curry(Asteroid.init)
         return a
             <^> json <| "name"

@@ -17,7 +17,7 @@ import Argo
 class CloseApproachSpec: QuickSpec {
     override func spec() {
         describe("A close approach") {
-            let bundle = NSBundle(forClass: self.dynamicType)
+            let bundle = NSBundle(forClass: type(of: self))
             let path = bundle.pathForResource("testfeed", ofType: "json")
             let data = NSData(contentsOfFile: path!)
             let asteroids = jsonParser(data!)

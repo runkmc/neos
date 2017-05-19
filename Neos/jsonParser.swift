@@ -9,8 +9,8 @@
 import Foundation
 import Argo
 
-func jsonParser(data:NSData) -> [Asteroid?] {
-    let json = try? NSJSONSerialization.JSONObjectWithData(data, options: []) as! [String: AnyObject]
+func jsonParser(_ data:Data) -> [Asteroid?] {
+    let json = try? JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
     guard let days = json!["near_earth_objects"] as? [String: [AnyObject]] else {
         return []
     }

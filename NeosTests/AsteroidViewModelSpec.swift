@@ -14,7 +14,7 @@ import Nimble
 class AsteroidViewModelSpec: QuickSpec {
     override func spec() {
         describe("The AsteroidViewModel") {
-            let bundle = NSBundle(forClass: self.dynamicType)
+            let bundle = NSBundle(forClass: type(of: self))
             let path = bundle.pathForResource("testfeed", ofType: "json")
             let data = NSData(contentsOfFile: path!)
             let asteroids = jsonParser(data!)
