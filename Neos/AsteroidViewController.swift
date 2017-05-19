@@ -56,13 +56,13 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         
         downloader.download { response in
             if let _ = response.result.error {
-                let alert = UIAlertController(title: "Error", message: "There was a problem getting today's asteroids.", preferredStyle: .Alert)
-                let ok = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+                let alert = UIAlertController(title: "Error", message: "There was a problem getting today's asteroids.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
                 alert.addAction(ok)
-                self.presentViewController(alert, animated: true, completion: nil)
+                self.present(alert, animated: true, completion: nil)
                 self.asteroids = []
                 self.activitySpinner.stopAnimating()
-                self.collectionView.hidden = false
+                self.collectionView.isHidden = false
                 return
             }
             if let data = response.data {
@@ -71,8 +71,8 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
                 self.pager.numberOfPages = self.asteroids.count
                 self.collectionView.reloadData()
                 self.activitySpinner.stopAnimating()
-                self.collectionView.hidden = false
-                self.pager.hidden = false
+                self.collectionView.isHidden = false
+                self.pager.isHidden = false
             }
         }
     }
