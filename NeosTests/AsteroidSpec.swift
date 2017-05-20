@@ -17,10 +17,10 @@ import Argo
 class AsteroidSpec: QuickSpec {
     override func spec() {
         describe("Creating an asteroid") {
-            let bundle = NSBundle(forClass: type(of: self))
-            let path = bundle.pathForResource("testfeed", ofType: "json")
+            let bundle = Bundle(for: type(of: self))
+            let path = bundle.path(forResource: "testfeed", ofType: "json")
             let data = NSData(contentsOfFile: path!)
-            let asteroids = jsonParser(data!)
+            let asteroids = jsonParser(data! as Data)
             let asteroid = asteroids[0]
             
             it("stores its properties") {
