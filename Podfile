@@ -11,11 +11,13 @@ target 'Neos' do
 end
 
 target 'NeosTests' do
+  pod 'Curry', '~> 3'
   pod 'Quick', '~> 1'
   pod 'Nimble', '~> 7'
 end
 
 target 'NeosUITests' do
+  pod 'Curry', '~> 3'
   pod 'Quick', '~> 1'
   pod 'Nimble', '~> 7'
 end
