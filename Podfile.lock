@@ -4,6 +4,8 @@ PODS:
     - Runes (>= 4.0.0)
   - Curry (3.0.0)
   - DZNEmptyDataSet (1.8.1)
+  - Nimble (7.0.0)
+  - Quick (1.1.0)
   - Runes (4.0.1)
 
 DEPENDENCIES:
@@ -11,6 +13,8 @@ DEPENDENCIES:
   - Argo (~> 4)
   - Curry (~> 3)
   - DZNEmptyDataSet (= 1.8.1)
+  - Nimble (~> 7)
+  - Quick (~> 1)
   - Runes (~> 4)
 
 SPEC CHECKSUMS:
@@ -18,8 +22,10 @@ SPEC CHECKSUMS:
   Argo: 5db06502fc1222d83011f574243089dab25202ff
   Curry: eb3d2c75aec678b3cc7fb2729d2ad6dd121531d1
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Nimble: 874982b605d4d752fcac6be695d13c502de84b1b
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   Runes: ff20f163b478ac2c0e18158d6086fd5b1997f983
 
-PODFILE CHECKSUM: 7d867d17ff7865c98ada66c2d9fa7d4714b0e6a3
+PODFILE CHECKSUM: 459eef701539941595ef1c04b104a2e3382e0895
 
 COCOAPODS: 1.2.1

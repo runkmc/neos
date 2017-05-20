@@ -11,8 +11,12 @@ target 'Neos' do
 end
 
 target 'NeosTests' do
+  pod 'Quick', '~> 1'
+  pod 'Nimble', '~> 7'
 end
 
 target 'NeosUITests' do
+  pod 'Quick', '~> 1'
+  pod 'Nimble', '~> 7'
 end
 
