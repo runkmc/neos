@@ -14,18 +14,18 @@ import Nimble
 class AsteroidDownloaderSpec: QuickSpec {
     override func spec() {
         describe("The Downloader") {
-            let calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
-            let startComps = NSDateComponents()
+            let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
+            var startComps = DateComponents()
             startComps.year = 1990
             startComps.month = 6
             startComps.day = 18
-            let startDate = calendar!.dateFromComponents(startComps)!
+            let startDate = calendar!.date(from:startComps)!
             
-            let endComps = NSDateComponents()
+            var endComps = DateComponents()
             endComps.year = 1990
             endComps.month = 9
             endComps.day = 24
-            let endDate = calendar!.dateFromComponents(endComps)!
+            let endDate = calendar!.date(from:endComps)!
             let downloader = AsteroidDownloader(startDate: startDate, endDate: endDate)
             
             it("generates the correct request") {
