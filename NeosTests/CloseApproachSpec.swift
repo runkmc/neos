@@ -9,18 +9,15 @@
 import Foundation
 import Quick
 import Nimble
-import Curry
-import Runes
-import Argo
 @testable import Neos
 
 class CloseApproachSpec: QuickSpec {
     override func spec() {
         describe("A close approach") {
-            let bundle = NSBundle(forClass: type(of: self))
-            let path = bundle.pathForResource("testfeed", ofType: "json")
+            let bundle = Bundle(for: type(of: self))
+            let path = bundle.path(forResource:"testfeed", ofType: "json")
             let data = NSData(contentsOfFile: path!)
-            let asteroids = jsonParser(data!)
+            let asteroids = jsonParser(data! as Data)
             let approach = asteroids[0]?.approach[0]
             
             it("stores its properties") {
