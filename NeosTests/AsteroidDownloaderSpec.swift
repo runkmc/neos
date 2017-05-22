@@ -7,8 +7,29 @@
 //
 
 import Foundation
+import XCTest
 @testable import Neos
 
+class AsteroidDownloaderTest: XCTestCase {
+    func testURLCreation() {
+        let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
+        var startComps = DateComponents()
+        startComps.year = 1990
+        startComps.month = 6
+        startComps.day = 18
+        let startDate = calendar!.date(from:startComps)!
+        
+        var endComps = DateComponents()
+        endComps.year = 1990
+        endComps.month = 9
+        endComps.day = 24
+        let endDate = calendar!.date(from:endComps)!
+        let downloader = AsteroidDownloader(startDate: startDate, endDate: endDate)
+
+        XCTAssertEqual(downloader.requestString, "https://api.nasa.gov/neo/rest/v1/feedstart_date=1990-06-18&end_date=1990-09-24&api_key=\(ApiKey)")
+
+    }
+}
 //class AsteroidDownloaderSpec: QuickSpec {
 //    override func spec() {
 //        describe("The Downloader") {
