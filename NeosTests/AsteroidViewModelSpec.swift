@@ -7,32 +7,30 @@
 //
 
 import Foundation
-//@testable import Neos
+import XCTest
+@testable import Neos
 
-//class AsteroidViewModelSpec: QuickSpec {
-//    override func spec() {
-//        describe("The AsteroidViewModel") {
-//            let bundle = NSBundle(forClass: type(of: self))
-//            let path = bundle.pathForResource("testfeed", ofType: "json")
-//            let data = NSData(contentsOfFile: path!)
-//            let asteroids = jsonParser(data!)
-//            let asteroid = asteroids[0]
-//            let viewModel = AsteroidViewModel(asteroid:asteroid)
-//            it("formats all properties correctly") {
-//                expect(viewModel?.name) == "(2011 EK)"
-//                expect(viewModel?.maxMeters) == "197 meters"
-//                expect(viewModel?.minMeters) == "88 meters"
-//                expect(viewModel?.maxFeet) == "646 feet"
-//                expect(viewModel?.minFeet) == "289 feet"
-//                expect(viewModel?.hazard) == "FALSE"
-//                expect(viewModel?.approachDate) == "2016-01-17"
-//                expect(viewModel?.kph) == "53,497.8kph"
-//                expect(viewModel?.mph) == "33,241.4mph"
-//                expect(viewModel?.missDistanceKilometers) == "52,985,684"
-//                expect(viewModel?.missDistanceMiles) == "32,923,778"
-//                expect(viewModel?.missDistanceLunar) == "137.78"
-//                expect(viewModel?.missDistanceAstronomical) == "0.354"
-//            }
-//        }
-//    }
-//}
+class AsteroidViewModelTest: XCTestCase {
+	func testAsteroidViewModelCreation() {
+		let bundle = Bundle(for: type(of: self))
+		let path = bundle.path(forResource: "testfeed", ofType: "json")
+		let data = NSData(contentsOfFile: path!)
+		let asteroids = jsonParser(data! as Data)
+		let asteroid = asteroids[0]
+		let viewModel = AsteroidViewModel(asteroid:asteroid)
+		
+		XCTAssertEqual(viewModel?.name, "(2011 EK)")
+		XCTAssertEqual(viewModel?.maxMeters, "197 meters")
+		XCTAssertEqual(viewModel?.minMeters, "88 meters")
+		XCTAssertEqual(viewModel?.maxFeet, "646 feet")
+		XCTAssertEqual(viewModel?.minFeet, "289 feet")
+		XCTAssertEqual(viewModel?.hazard, "FALSE")
+		XCTAssertEqual(viewModel?.approachDate, "2016-01-17")
+		XCTAssertEqual(viewModel?.kph, "53,497.8kph")
+		XCTAssertEqual(viewModel?.mph, "33,241.4mph")
+		XCTAssertEqual(viewModel?.missDistanceKilometers, "52,985,684")
+		XCTAssertEqual(viewModel?.missDistanceMiles, "32,923,778")
+		XCTAssertEqual(viewModel?.missDistanceLunar, "137.78")
+		XCTAssertEqual(viewModel?.missDistanceAstronomical, "0.354")
+	}
+}
