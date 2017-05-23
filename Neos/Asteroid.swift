@@ -36,4 +36,3 @@ extension Asteroid: Decodable {
             <*> json <|| "close_approach_data"
     }
 }
-
