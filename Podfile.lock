@@ -1,0 +1,35 @@
+PODS:
+  - Alamofire (4.6.0)
+  - AppCenter (1.5.0):
+    - AppCenter/Analytics (= 1.5.0)
+    - AppCenter/Crashes (= 1.5.0)
+  - AppCenter/Analytics (1.5.0):
+    - AppCenter/Core
+  - AppCenter/Core (1.5.0)
+  - AppCenter/Crashes (1.5.0):
+    - AppCenter/Core
+  - AppCenter/Distribute (1.5.0):
+    - AppCenter/Core
+  - AppCenterXCUITestExtensions (1.0.0)
+  - Keys (1.0.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.6.0)
+  - AppCenter
+  - AppCenter/Distribute
+  - AppCenterXCUITestExtensions
+  - Keys (from `Pods/CocoaPodsKeys`)
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  AppCenter: 42c293f0de27e173aacd600a55a49da5317cd40e
+  AppCenterXCUITestExtensions: 8825ed941664fa21d6740a5ed6928a84c06623ac
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+
+PODFILE CHECKSUM: 820acff963709a082c9f65afed257b0a95fe3e33
+
+COCOAPODS: 1.4.0

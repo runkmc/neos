@@ -7,21 +7,19 @@
 //
 
 import Foundation
-import Argo
 
 func jsonParser(_ data:Data) -> [Asteroid?] {
-    let json = try? JSONSerialization.jsonObject(with: data, options: []) as! [String: AnyObject]
-    guard let days = json!["near_earth_objects"] as? [String: [AnyObject]] else {
-        return []
-    }
-    var asteroidJSON = [AnyObject]()
-    days.forEach { _, value in
+    let decoder = JSONDecoder()
+    let pagedAsteroids = try! decoder.decode(PagedAsteroids.self, from: data)
+
+    var asteroids = [Asteroid?]()
+    
+    let sortedAsteroids = pagedAsteroids.asteroids.sorted(by: { $0.0 < $1.0 })
+    sortedAsteroids.forEach { _, value in
         value.forEach { v in
-            asteroidJSON.append(v)
+            asteroids.append(v)
         }
     }
-    return asteroidJSON.flatMap {asteroid -> Asteroid? in
-        let a: Asteroid? = decode(asteroid)
-        return a
-    }
+    
+    return asteroids
 }

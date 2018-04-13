@@ -13,14 +13,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var measurementControl: UISegmentedControl!
     
-    // OVERRIDES
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let attrs = [NSFontAttributeName: UIFont(name:"FiraMono-Regular", size:14)!]
+        let attrs = [NSAttributedStringKey.font: UIFont(name:"FiraMono-Regular", size:14)!]
         measurementControl.setTitleTextAttributes(attrs, for: UIControlState())
         measurementControl.tintColor = UIColor.white
         backButton.layer.cornerRadius = 4

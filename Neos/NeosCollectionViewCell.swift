@@ -20,4 +20,5 @@ class NeosCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var basicDistanceLabel: UILabel!
     @IBOutlet weak var auDistanceLabel: UILabel!
     @IBOutlet weak var lunarDistanceLabel: UILabel!
+
 }

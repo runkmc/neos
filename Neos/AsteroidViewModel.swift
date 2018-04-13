@@ -33,27 +33,28 @@ struct AsteroidViewModel {
         f.numberStyle = .decimal
         f.maximumFractionDigits = 0
         self.name = asteroid.name
-        self.maxMeters = (f.string(from: NSNumber(value:asteroid.estimatedDiameterMaxMeters)) ?? "UNKNOWN") + " meters"
-        self.minMeters = (f.string(from: NSNumber(value:asteroid.estimatedDiameterMinMeters)) ?? "UNKNOWN") + " meters"
-        self.maxFeet = (f.string(from: NSNumber(value:asteroid.estimatedDiameterMaxFeet)) ?? "UNKNOWN") + " feet"
-        self.minFeet = (f.string(from: NSNumber(value:asteroid.estimatedDiameterMinFeet)) ?? "UNKNOWN") + " feet"
+        self.maxMeters = (f.string(from: NSNumber(value:asteroid.estimatedDiameter.meters.max)) ?? "UNKNOWN") + " meters"
+        self.minMeters = (f.string(from: NSNumber(value:asteroid.estimatedDiameter.meters.min)) ?? "UNKNOWN") + " meters"
+        self.maxFeet = (f.string(from: NSNumber(value:asteroid.estimatedDiameter.feet.max)) ?? "UNKNOWN") + " feet"
+        self.minFeet = (f.string(from: NSNumber(value:asteroid.estimatedDiameter.feet.min)) ?? "UNKNOWN") + " feet"
         self.hazard = asteroid.hazardous ? "TRUE" : "FALSE"
-        let approach = asteroid.approach[0]
+        let approach = asteroid.closeApproach[0]
         f.maximumFractionDigits = 1
-        self.approachDate = approach.closeApproachDate
-        let k = f.string(from: NSNumber(value:(approach.kph as NSString).doubleValue))
-        self.kph = (k ?? "UNKNOWN ") + "kph"
-        let m = f.string(from: NSNumber(value:(approach.mph as NSString).doubleValue))
-        self.mph = (m ?? "UNKNOWN ") + "mph"
-        let missK = f.string(from: NSNumber(value:(approach.missDistanceKilometers as NSString).integerValue))
+        self.approachDate = approach.date
+        let k = f.string(from: NSNumber(value:(approach.relativeVelocity.kilometersPerHour as NSString).doubleValue))
+        self.kph = (k ?? "UNKNOWN ") + " kph"
+        let m = f.string(from: NSNumber(value:(approach.relativeVelocity.milesPerHour as NSString).doubleValue))
+        self.mph = (m ?? "UNKNOWN ") + " mph"
+        let missK = f.string(from: NSNumber(value:(approach.missDistance.kilometers as NSString).doubleValue))
         self.missDistanceKilometers = missK ?? "UNKNOWN"
-        let missM = f.string(from: NSNumber(value:(approach.missDistanceMiles as NSString).integerValue))
+        let missM = f.string(from: NSNumber(value:(approach.missDistance.miles as NSString).doubleValue))
         self.missDistanceMiles = missM ?? "UNKNOWN"
         f.maximumFractionDigits = 2
-        let missL = f.string(from: NSNumber(value:(approach.missDistanceLunar as NSString).doubleValue))
+        let missL = f.string(from: NSNumber(value:(approach.missDistance.lunar as NSString).doubleValue))
         self.missDistanceLunar = missL ?? "UNKNOWN"
         f.maximumFractionDigits = 3
-        let missA = f.string(from: NSNumber(value:(approach.missDistanceAstronomical as NSString).doubleValue))
+        let missA = f.string(from: NSNumber(value:(approach.missDistance.astronomical as NSString).doubleValue))
         self.missDistanceAstronomical = missA ?? "UNKNOWN"
     }
+
 }

@@ -7,30 +7,22 @@
 //
 
 import Foundation
-import Runes
-import Argo
-import Curry
 
-struct CloseApproach {
-    let closeApproachDate: String
-    let kph: String
-    let mph: String
-    let missDistanceKilometers: String
-    let missDistanceMiles: String
-    let missDistanceLunar: String
-    let missDistanceAstronomical: String
-}
+struct CloseApproach : Codable {
 
-extension CloseApproach: Decodable {
-    static func decode(_ json: JSON) -> Decoded<CloseApproach> {
-        let c = curry(CloseApproach.init)
-        return c
-            <^> json <| "close_approach_date"
-            <*> json <| ["relative_velocity","kilometers_per_hour"]
-            <*> json <| ["relative_velocity","miles_per_hour"]
-            <*> json <| ["miss_distance","kilometers"]
-            <*> json <| ["miss_distance","miles"]
-            <*> json <| ["miss_distance","lunar"]
-            <*> json <| ["miss_distance","astronomical"]
+    let date: String
+    let epochDate: Int
+    let relativeVelocity: RelativeVelocity
+    let missDistance: MissDistance
+    let orbitingBody: String
+
+    enum CodingKeys : String, CodingKey {
+        case date = "close_approach_date"
+        case epochDate = "epoch_date_close_approach"
+        case relativeVelocity = "relative_velocity"
+        case missDistance = "miss_distance"
+        case orbitingBody = "orbiting_body"
     }
+
 }
+

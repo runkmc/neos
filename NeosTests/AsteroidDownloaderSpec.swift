@@ -11,6 +11,7 @@ import XCTest
 @testable import Neos
 
 class AsteroidDownloaderTest: XCTestCase {
+
     func testURLCreation() {
         let calendar = NSCalendar(calendarIdentifier: NSCalendar.Identifier.gregorian)
         var startComps = DateComponents()
@@ -27,6 +28,6 @@ class AsteroidDownloaderTest: XCTestCase {
         let downloader = AsteroidDownloader(startDate: startDate, endDate: endDate)
 
         XCTAssertEqual(downloader.requestString, "https://api.nasa.gov/neo/rest/v1/feed?start_date=1990-06-18&end_date=1990-09-24&api_key=\(ApiKey)")
-
     }
+
 }

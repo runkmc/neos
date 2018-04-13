@@ -8,12 +8,9 @@
 
 import UIKit
 import Social
-import Alamofire
 
-class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class AsteroidViewController: UIViewController {
 
-    // PROPERTIES OR INSTANCE VARIABLES OR WHAEVER I'M SUPPOSED TO CALL THEM NOW
-    
     @IBOutlet weak var activitySpinner: UIActivityIndicatorView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pager: UIPageControl!
@@ -22,12 +19,10 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
     let outerPlanet = LittlePlanetView()
     var asteroids = [AsteroidViewModel]()
     var units: String?
-    
-    // OVERRIDES THIS PART IS BORING
-    
+
     override func viewWillAppear(_ animated: Bool) {
         setPlanetsInMotion()
-        getUnits()
+        let _ = getUnits()
     }
     
     override func viewDidLoad() {
@@ -64,7 +59,7 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
             }
             if let data = response.data {
                 let asteroidModels = jsonParser(data)
-                self.asteroids = asteroidModels.flatMap { AsteroidViewModel(asteroid: $0) }
+                self.asteroids = asteroidModels.compactMap { AsteroidViewModel(asteroid: $0) }
                 self.pager.numberOfPages = self.asteroids.count
                 self.collectionView.reloadData()
                 self.activitySpinner.stopAnimating()
@@ -82,27 +77,11 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         return true
     }
     
-    // GET DEFAULT UNITS
-    
-    func getUnits() -> String {
-        if let u = self.units {
-            return u
-        }
-        let defaults = UserDefaults.standard
-        let selection = defaults.object(forKey: "units") as? String ?? "metric"
-        self.units = selection
-        return selection
-    }
-    
-    // SEGUE JUNK
-    
     @IBAction func unwindToAsteroidController(_ sender:UIStoryboardSegue) {
         self.units = nil
-        getUnits()
+        let _ = getUnits()
         collectionView.reloadData()
     }
-    
-    // TWEEEEEEEEET
     
     @IBAction func tweetTapped(_ sender: AnyObject) {
         guard let currentAsteroid = collectionView.indexPathForItem(at: collectionView.convert(collectionView.center, from: collectionView.superview))?.row else {
@@ -115,10 +94,18 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
             self.present(tweetVC!, animated: true, completion: nil)
         }
     }
-    
-    // ANIMATIONS BECAUSE WHY NOT HAVE ONE CLASS DO ALL OF THIS
-    
-    func setPlanetsInMotion() {
+
+    func getUnits() -> String {
+        if let u = self.units {
+            return u
+        }
+        let defaults = UserDefaults.standard
+        let selection = defaults.object(forKey: "units") as? String ?? "metric"
+        self.units = selection
+        return selection
+    }
+
+    @objc func setPlanetsInMotion() {
         orbitView.addSubview(innerPlanet)
         innerPlanet.frame = CGRect(x: 47, y: 175, width: 18, height: 18)
         orbitView.addSubview(outerPlanet)
@@ -137,13 +124,34 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         planet.backgroundColor = UIColor.clear
         planet.layer.add(planetOrbit, forKey: "orbit")
     }
-    
-    // UICollectionViewDataSource stuff
-    
+
+}
+
+extension AsteroidViewController : UICollectionViewDelegate {
+
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let cv = scrollView as! UICollectionView
+        if let cp = cv.indexPathForItem(at: cv.convert(cv.center, from: cv.superview))?.row {
+            pager.currentPage = cp
+        }
+    }
+
+}
+
+extension AsteroidViewController : UICollectionViewDelegateFlowLayout {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return collectionView.frame.size
+    }
+
+}
+
+extension AsteroidViewController : UICollectionViewDataSource {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return asteroids.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "neosCell", for: indexPath) as! NeosCollectionViewCell
         let asteroid = asteroids[indexPath.row]
@@ -152,7 +160,7 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
         cell.hazardLabel.text = asteroid.hazard
         cell.auDistanceLabel.text = asteroid.missDistanceAstronomical
         cell.lunarDistanceLabel.text = asteroid.missDistanceLunar
-        
+
         if getUnits() == "metric" {
             cell.basicDistanceLabel.text = asteroid.missDistanceKilometers
             cell.speedLabel.text = asteroid.kph
@@ -166,23 +174,8 @@ class AsteroidViewController: UIViewController, UICollectionViewDataSource, UICo
             cell.minDiameterLabel.text = asteroid.minFeet
             cell.distanceUnitsLabel.text = "MILES:"
         }
-        
+
         return cell
     }
-    
-    // UIScrollViewDelegate stuff, to connect the collectionView to the page control.
-    
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let cv = scrollView as! UICollectionView
-        if let cp = cv.indexPathForItem(at: cv.convert(cv.center, from: cv.superview))?.row {
-            pager.currentPage = cp
-        }
-    }
-    
-    // UICollectionViewDelegateFlowLayout stuff. What a short and very good name for this.
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return collectionView.frame.size
-    }
-    
+
 }

@@ -8,12 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0A699C311ED3A0F2005B32E3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A699C301ED3A0F2005B32E3 /* Alamofire.framework */; };
-		0A699C331ED3A0F6005B32E3 /* Argo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A699C321ED3A0F6005B32E3 /* Argo.framework */; };
-		0A699C371ED3A0FD005B32E3 /* Runes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A699C361ED3A0FD005B32E3 /* Runes.framework */; };
-		0A699C3A1ED3A30C005B32E3 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A699C391ED3A30C005B32E3 /* Curry.framework */; };
 		0A9046161C4C373A003FC2BC /* AsteroidDownloaderSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046151C4C373A003FC2BC /* AsteroidDownloaderSpec.swift */; };
 		0A9046181C4C3A0C003FC2BC /* AsteroidDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046171C4C3A0C003FC2BC /* AsteroidDownloader.swift */; };
-		0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9046191C4C432C003FC2BC /* NasaApiKey.swift */; };
 		0A90461C1C4C4CFB003FC2BC /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90461B1C4C4CFB003FC2BC /* Asteroid.swift */; };
 		0A90461F1C4C4D13003FC2BC /* AsteroidSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A90461E1C4C4D13003FC2BC /* AsteroidSpec.swift */; };
 		0A9046221C4C516C003FC2BC /* testfeed.json in Resources */ = {isa = PBXBuildFile; fileRef = 0A9046211C4C516C003FC2BC /* testfeed.json */; };
@@ -35,6 +31,17 @@
 		0AFFFA011C55E7D200087FF4 /* LittlePlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFFA001C55E7D200087FF4 /* LittlePlanetView.swift */; };
 		0AFFFA031C57027800087FF4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFFA021C57027800087FF4 /* SettingsViewController.swift */; };
 		0AFFFA051C57054200087FF4 /* NeosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFFA041C57054200087FF4 /* NeosCollectionViewCell.swift */; };
+		66ACC33C297275A6D7D7EABF /* Pods_NeosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C10D236A74BC4DFAC1267D2 /* Pods_NeosTests.framework */; };
+		6DAB2FD42B4683C1FF0ADA5F /* Pods_NeosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F144C254379F8652EA993C /* Pods_NeosUITests.framework */; };
+		76DA5C21ABFB8A4EEFC7FDDB /* Pods_Neos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E407C2A38580879A01492C8E /* Pods_Neos.framework */; };
+		C309B10C75AF75AC20A4DC57 /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309BCC780E2A18B1229ACD1 /* Links.swift */; };
+		C309B656EEA843CF3BF3DA02 /* EstimatedDiameterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309BECD0706078C18B0131E /* EstimatedDiameterInfo.swift */; };
+		C309BC5553D8A4CC6442DDDB /* RelativeVelocity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309B7274A811A864FE79DF8 /* RelativeVelocity.swift */; };
+		C309BCB69C2625A6E02A5FBB /* EstimatedDiameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309B81F3D3A699DDE8A75B8 /* EstimatedDiameter.swift */; };
+		C309BE9933F7C54608ADEF50 /* MissDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = C309B5B32CFE34C26D307417 /* MissDistance.swift */; };
+		DE18723B1F946CC80092BA26 /* PagedAsteroidsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE18723A1F946CC80092BA26 /* PagedAsteroidsSpec.swift */; };
+		DE45CC381F9432820045F3DF /* PagedAsteroids.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE45CC371F9432820045F3DF /* PagedAsteroids.swift */; };
+		DE7800271F95B051002D397C /* NasaApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7800261F95B051002D397C /* NasaApiKey.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +69,6 @@
 		0A699C391ED3A30C005B32E3 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = Carthage/Build/iOS/Curry.framework; sourceTree = "<group>"; };
 		0A9046151C4C373A003FC2BC /* AsteroidDownloaderSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidDownloaderSpec.swift; sourceTree = "<group>"; };
 		0A9046171C4C3A0C003FC2BC /* AsteroidDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidDownloader.swift; sourceTree = "<group>"; };
-		0A9046191C4C432C003FC2BC /* NasaApiKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NasaApiKey.swift; sourceTree = "<group>"; };
 		0A90461B1C4C4CFB003FC2BC /* Asteroid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
 		0A90461E1C4C4D13003FC2BC /* AsteroidSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsteroidSpec.swift; sourceTree = "<group>"; };
 		0A9046211C4C516C003FC2BC /* testfeed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = testfeed.json; sourceTree = "<group>"; };
@@ -90,6 +96,23 @@
 		0AFFFA001C55E7D200087FF4 /* LittlePlanetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LittlePlanetView.swift; sourceTree = "<group>"; };
 		0AFFFA021C57027800087FF4 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0AFFFA041C57054200087FF4 /* NeosCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeosCollectionViewCell.swift; sourceTree = "<group>"; };
+		0D008225A0663B0A23DC782D /* Pods-NeosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		223F931D94583ADBC6563E0D /* Pods-Neos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neos.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Neos/Pods-Neos.debug.xcconfig"; sourceTree = "<group>"; };
+		6C10D236A74BC4DFAC1267D2 /* Pods_NeosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78F144C254379F8652EA993C /* Pods_NeosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NeosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAE25EB21FD13B48530144D4 /* Pods-NeosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C07C143F139D2B37F3940152 /* Pods-NeosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1C2E69D0A5416CACE4F60AA /* Pods-NeosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests.release.xcconfig"; sourceTree = "<group>"; };
+		C309B5B32CFE34C26D307417 /* MissDistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissDistance.swift; sourceTree = "<group>"; };
+		C309B7274A811A864FE79DF8 /* RelativeVelocity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelativeVelocity.swift; sourceTree = "<group>"; };
+		C309B81F3D3A699DDE8A75B8 /* EstimatedDiameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimatedDiameter.swift; sourceTree = "<group>"; };
+		C309BCC780E2A18B1229ACD1 /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
+		C309BECD0706078C18B0131E /* EstimatedDiameterInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstimatedDiameterInfo.swift; sourceTree = "<group>"; };
+		DE18723A1F946CC80092BA26 /* PagedAsteroidsSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedAsteroidsSpec.swift; sourceTree = "<group>"; };
+		DE45CC371F9432820045F3DF /* PagedAsteroids.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagedAsteroids.swift; sourceTree = "<group>"; };
+		DE7800261F95B051002D397C /* NasaApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaApiKey.swift; sourceTree = "<group>"; };
+		E407C2A38580879A01492C8E /* Pods_Neos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECFB887AD12D62F4E0317FF4 /* Pods-Neos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neos.release.xcconfig"; path = "Pods/Target Support Files/Pods-Neos/Pods-Neos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +121,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A699C311ED3A0F2005B32E3 /* Alamofire.framework in Frameworks */,
-				0A699C3A1ED3A30C005B32E3 /* Curry.framework in Frameworks */,
-				0A699C371ED3A0FD005B32E3 /* Runes.framework in Frameworks */,
-				0A699C331ED3A0F6005B32E3 /* Argo.framework in Frameworks */,
+				76DA5C21ABFB8A4EEFC7FDDB /* Pods_Neos.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66ACC33C297275A6D7D7EABF /* Pods_NeosTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6DAB2FD42B4683C1FF0ADA5F /* Pods_NeosUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +152,9 @@
 				0A699C341ED3A0FA005B32E3 /* DZNEmptyDataSet.framework */,
 				0A699C321ED3A0F6005B32E3 /* Argo.framework */,
 				0A699C301ED3A0F2005B32E3 /* Alamofire.framework */,
+				E407C2A38580879A01492C8E /* Pods_Neos.framework */,
+				6C10D236A74BC4DFAC1267D2 /* Pods_NeosTests.framework */,
+				78F144C254379F8652EA993C /* Pods_NeosUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,6 +190,12 @@
 			children = (
 				0A90461B1C4C4CFB003FC2BC /* Asteroid.swift */,
 				0A9046251C4C7B18003FC2BC /* CloseApproach.swift */,
+				DE45CC371F9432820045F3DF /* PagedAsteroids.swift */,
+				C309BECD0706078C18B0131E /* EstimatedDiameterInfo.swift */,
+				C309BCC780E2A18B1229ACD1 /* Links.swift */,
+				C309B7274A811A864FE79DF8 /* RelativeVelocity.swift */,
+				C309B5B32CFE34C26D307417 /* MissDistance.swift */,
+				C309B81F3D3A699DDE8A75B8 /* EstimatedDiameter.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -184,7 +216,7 @@
 			children = (
 				0AC728FD1C46F4B000CCBD3C /* AppDelegate.swift */,
 				0AC729091C46F4B200CCBD3C /* Info.plist */,
-				0A9046191C4C432C003FC2BC /* NasaApiKey.swift */,
+				DE7800261F95B051002D397C /* NasaApiKey.swift */,
 			);
 			name = System;
 			sourceTree = "<group>";
@@ -211,6 +243,7 @@
 			children = (
 				0A90461E1C4C4D13003FC2BC /* AsteroidSpec.swift */,
 				0A9046231C4C7B05003FC2BC /* CloseApproachSpec.swift */,
+				DE18723A1F946CC80092BA26 /* PagedAsteroidsSpec.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -232,6 +265,7 @@
 				0AC7291C1C46F4B500CCBD3C /* NeosUITests */,
 				0AC728FB1C46F4AE00CCBD3C /* Products */,
 				0A699C2F1ED3A0F1005B32E3 /* Frameworks */,
+				F1DDC67D5BB42C8E629C234F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -298,6 +332,19 @@
 			name = Subclasses;
 			sourceTree = "<group>";
 		};
+		F1DDC67D5BB42C8E629C234F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				223F931D94583ADBC6563E0D /* Pods-Neos.debug.xcconfig */,
+				ECFB887AD12D62F4E0317FF4 /* Pods-Neos.release.xcconfig */,
+				0D008225A0663B0A23DC782D /* Pods-NeosTests.debug.xcconfig */,
+				C1C2E69D0A5416CACE4F60AA /* Pods-NeosTests.release.xcconfig */,
+				C07C143F139D2B37F3940152 /* Pods-NeosUITests.debug.xcconfig */,
+				AAE25EB21FD13B48530144D4 /* Pods-NeosUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,10 +352,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC729221C46F4B600CCBD3C /* Build configuration list for PBXNativeTarget "Neos" */;
 			buildPhases = (
+				6072C394F9C08D92E2F7D41E /* [CP] Check Pods Manifest.lock */,
 				0AC728F61C46F4AE00CCBD3C /* Sources */,
 				0AC728F71C46F4AE00CCBD3C /* Frameworks */,
 				0AC728F81C46F4AE00CCBD3C /* Resources */,
-				0A699C381ED3A112005B32E3 /* ShellScript */,
+				52036F38494D763B3C58028B /* [CP] Embed Pods Frameworks */,
+				27DF7680BB9AE0FABC1B1A4B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -323,9 +372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC729251C46F4B600CCBD3C /* Build configuration list for PBXNativeTarget "NeosTests" */;
 			buildPhases = (
+				5594F0CFDDC2D00C1658EEDD /* [CP] Check Pods Manifest.lock */,
 				0AC7290A1C46F4B300CCBD3C /* Sources */,
 				0AC7290B1C46F4B300CCBD3C /* Frameworks */,
 				0AC7290C1C46F4B300CCBD3C /* Resources */,
+				7E00A7BC73E1E1AD5D7F161C /* [CP] Embed Pods Frameworks */,
+				EC21B5A18DB528B25B3A7B96 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -341,9 +393,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AC729281C46F4B600CCBD3C /* Build configuration list for PBXNativeTarget "NeosUITests" */;
 			buildPhases = (
+				FDD436E7C35F8C55A694E25D /* [CP] Check Pods Manifest.lock */,
 				0AC729151C46F4B400CCBD3C /* Sources */,
 				0AC729161C46F4B400CCBD3C /* Frameworks */,
 				0AC729171C46F4B400CCBD3C /* Resources */,
+				0B9871DF46A7A88CC9A95D6E /* [CP] Embed Pods Frameworks */,
+				DBBA5DC134EC27ED932A6D1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -362,24 +417,24 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Kevin McGladdery";
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Scott Densmore";
 				TargetAttributes = {
 					0AC728F91C46F4AE00CCBD3C = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = P3HAZUW5GC;
-						LastSwiftMigration = 0830;
+						DevelopmentTeam = 27ZDER873F;
+						LastSwiftMigration = 0900;
 					};
 					0AC7290D1C46F4B300CCBD3C = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = P3HAZUW5GC;
-						LastSwiftMigration = 0830;
+						DevelopmentTeam = 27ZDER873F;
+						LastSwiftMigration = 0900;
 						TestTargetID = 0AC728F91C46F4AE00CCBD3C;
 					};
 					0AC729181C46F4B400CCBD3C = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = P3HAZUW5GC;
-						LastSwiftMigration = 0830;
+						DevelopmentTeam = 27ZDER873F;
+						LastSwiftMigration = 0900;
 						TestTargetID = 0AC728F91C46F4AE00CCBD3C;
 					};
 				};
@@ -436,22 +491,160 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A699C381ED3A112005B32E3 /* ShellScript */ = {
+		0B9871DF46A7A88CC9A95D6E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Argo.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Runes.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Curry.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.framework",
 			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppCenterXCUITestExtensions.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27DF7680BB9AE0FABC1B1A4B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Neos/Pods-Neos-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/AppCenter/AppCenterDistributeResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AppCenterDistributeResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Neos/Pods-Neos-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52036F38494D763B3C58028B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Neos/Pods-Neos-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Neos/Pods-Neos-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5594F0CFDDC2D00C1658EEDD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeosTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6072C394F9C08D92E2F7D41E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neos-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E00A7BC73E1E1AD5D7F161C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBBA5DC134EC27ED932A6D1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeosUITests/Pods-NeosUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC21B5A18DB528B25B3A7B96 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NeosTests/Pods-NeosTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDD436E7C35F8C55A694E25D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeosUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -465,13 +658,19 @@
 				0AFFFA031C57027800087FF4 /* SettingsViewController.swift in Sources */,
 				0AFFF9FC1C55D9CE00087FF4 /* AsteroidViewController.swift in Sources */,
 				0AEFB0FE1C52E08F00A551D7 /* AsteroidViewModel.swift in Sources */,
-				0A90461A1C4C432C003FC2BC /* NasaApiKey.swift in Sources */,
 				0A9046281C4C968C003FC2BC /* jsonParser.swift in Sources */,
+				DE45CC381F9432820045F3DF /* PagedAsteroids.swift in Sources */,
 				0AFFFA051C57054200087FF4 /* NeosCollectionViewCell.swift in Sources */,
+				DE7800271F95B051002D397C /* NasaApiKey.swift in Sources */,
 				0A9046261C4C7B18003FC2BC /* CloseApproach.swift in Sources */,
 				0AC728FE1C46F4B000CCBD3C /* AppDelegate.swift in Sources */,
 				0AFFFA011C55E7D200087FF4 /* LittlePlanetView.swift in Sources */,
 				0A90461C1C4C4CFB003FC2BC /* Asteroid.swift in Sources */,
+				C309B656EEA843CF3BF3DA02 /* EstimatedDiameterInfo.swift in Sources */,
+				C309B10C75AF75AC20A4DC57 /* Links.swift in Sources */,
+				C309BC5553D8A4CC6442DDDB /* RelativeVelocity.swift in Sources */,
+				C309BE9933F7C54608ADEF50 /* MissDistance.swift in Sources */,
+				C309BCB69C2625A6E02A5FBB /* EstimatedDiameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +680,7 @@
 			files = (
 				0AEFB1011C52E0B700A551D7 /* AsteroidViewModelSpec.swift in Sources */,
 				0A9046241C4C7B05003FC2BC /* CloseApproachSpec.swift in Sources */,
+				DE18723B1F946CC80092BA26 /* PagedAsteroidsSpec.swift in Sources */,
 				0A9046161C4C373A003FC2BC /* AsteroidDownloaderSpec.swift in Sources */,
 				0A90461F1C4C4D13003FC2BC /* AsteroidSpec.swift in Sources */,
 			);
@@ -533,27 +733,41 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -571,8 +785,9 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -580,27 +795,41 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -612,89 +841,93 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		0AC729231C46F4B600CCBD3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 223F931D94583ADBC6563E0D /* Pods-Neos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P3HAZUW5GC;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				DEVELOPMENT_TEAM = 27ZDER873F;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Neos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = software.kmcg.asteroid.Neos;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = io.scottdensmore.neos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		0AC729241C46F4B600CCBD3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECFB887AD12D62F4E0317FF4 /* Pods-Neos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = P3HAZUW5GC;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				DEVELOPMENT_TEAM = 27ZDER873F;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Neos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = software.kmcg.asteroid.Neos;
+				PRODUCT_BUNDLE_IDENTIFIER = io.scottdensmore.neos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		0AC729261C46F4B600CCBD3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D008225A0663B0A23DC782D /* Pods-NeosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = P3HAZUW5GC;
+				DEVELOPMENT_TEAM = 27ZDER873F;
 				INFOPLIST_FILE = NeosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.kmcg.asteroid.NeosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neos.app/Neos";
 			};
 			name = Debug;
 		};
 		0AC729271C46F4B600CCBD3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1C2E69D0A5416CACE4F60AA /* Pods-NeosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = P3HAZUW5GC;
+				DEVELOPMENT_TEAM = 27ZDER873F;
 				INFOPLIST_FILE = NeosTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.kmcg.asteroid.NeosTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Neos.app/Neos";
 			};
 			name = Release;
 		};
 		0AC729291C46F4B600CCBD3C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C07C143F139D2B37F3940152 /* Pods-NeosUITests.debug.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = P3HAZUW5GC;
+				DEVELOPMENT_TEAM = 27ZDER873F;
 				INFOPLIST_FILE = NeosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.kmcg.asteroid.NeosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Neos;
 				USES_XCTRUNNER = YES;
 			};
@@ -702,13 +935,15 @@
 		};
 		0AC7292A1C46F4B600CCBD3C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAE25EB21FD13B48530144D4 /* Pods-NeosUITests.release.xcconfig */;
 			buildSettings = {
-				DEVELOPMENT_TEAM = P3HAZUW5GC;
+				DEVELOPMENT_TEAM = 27ZDER873F;
 				INFOPLIST_FILE = NeosUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = software.kmcg.asteroid.NeosUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = Neos;
 				USES_XCTRUNNER = YES;
 			};

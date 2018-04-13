@@ -7,32 +7,25 @@
 //
 
 import Foundation
-import Runes
-import Argo
-import Curry
 
-struct Asteroid {
+struct Asteroid : Codable {
+
     let name: String
-    let url: String
-    let estimatedDiameterMaxMeters: Double
-    let estimatedDiameterMinMeters: Double
-    let estimatedDiameterMaxFeet: Double
-    let estimatedDiameterMinFeet: Double
+    let links: Links
+    let url: URL
+    let absoluteMagnitude: Float
+    let estimatedDiameter: EstimatedDiameter
     let hazardous: Bool
-    let approach: [CloseApproach]
-}
-
-extension Asteroid: Decodable {
-    static func decode(_ json: JSON) -> Decoded<Asteroid> {
-        let a = curry(Asteroid.init)
-        return a
-            <^> json <| "name"
-            <*> json <| "nasa_jpl_url"
-            <*> json <| ["estimated_diameter","meters","estimated_diameter_max"]
-            <*> json <| ["estimated_diameter","meters","estimated_diameter_min"]
-            <*> json <| ["estimated_diameter","feet","estimated_diameter_max"]
-            <*> json <| ["estimated_diameter","feet","estimated_diameter_min"]
-            <*> json <| "is_potentially_hazardous_asteroid"
-            <*> json <|| "close_approach_data"
+    let closeApproach: [CloseApproach]
+    
+    enum CodingKeys : String, CodingKey {
+        case name
+        case links
+        case url = "nasa_jpl_url"
+        case absoluteMagnitude = "absolute_magnitude_h"
+        case estimatedDiameter = "estimated_diameter"
+        case hazardous = "is_potentially_hazardous_asteroid"
+        case closeApproach = "close_approach_data"
     }
+
 }
